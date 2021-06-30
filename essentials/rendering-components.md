@@ -9,7 +9,7 @@ Be sure that your rendered HTML includes an outer element such as `<div>` that c
 {% endhint %}
 
 ```javascript
-// File: views/livewire/myComponent.cfm
+// File: ./views/livewire/myComponent.cfm
 
 <!--- GOOD --->
 <cfoutput>
