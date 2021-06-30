@@ -31,7 +31,7 @@ component extends="cbLivewire.models.Component" accessors="true" {
     // Render our view
     function $renderIt(){
         return this.$renderView( "cbLivewire/searchUsers", {
-            users: userService.findBySearch( this.getSearch() )
+            users: userService.findBySearch( getSearch() )
         } );
     }
 
@@ -44,7 +44,11 @@ component extends="cbLivewire.models.Component" accessors="true" {
 
 <cfoutput>
 <div>
-    <input wire:model="search" type="text" placeholder="Search users..."/>
+    <input 
+        wire:model="search" 
+        type="text" 
+        placeholder="Search users..."
+    />
 
     <ul>
         <cfloop array="#args.users#" index="user">
@@ -72,10 +76,10 @@ Now that you've defined your cbLivewire component and view, you can include this
 
 Let's take a moment to reflect on what in the world just happened.
 
-* Livewire renders the initial component out with our .cfm page, which means it's SEO friendly.
-* When a user types into the search, Livewire makes an AJAX request to the server with the updated state.
-* The server re-renders the component and responds with the new HTML.
-* Livewire intelligently mutates the DOM based on our state changes.
+1. Livewire renders the initial component out with our `.cfm` page, which means it's SEO friendly.
+2. When a user types into the search, Livewire makes an AJAX request to the server with the updated state.
+3. The server re-renders the component and responds with the new HTML.
+4. Livewire intelligently mutates the DOM based on our state changes.
 
 More reflecting...
 
