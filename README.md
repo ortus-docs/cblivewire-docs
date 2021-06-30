@@ -16,7 +16,7 @@ Impossible you say? Nay we say! Introducing **cbLivewire**.
 
 ## A real-time search component built with cbLivewire in minutes...
 
-```text
+```javascript
 // File: ./livewire/SearchUsers.cfc
 
 component extends="cbLivewire.models.Component" accessors="true" {
@@ -38,7 +38,7 @@ component extends="cbLivewire.models.Component" accessors="true" {
 
 ```
 
-```text
+```markup
 // File: ./views/livewire/searchUsers.cfm
 
 <cfoutput>
@@ -56,7 +56,7 @@ component extends="cbLivewire.models.Component" accessors="true" {
 
 Now that you've defined your cbLivewire component and view, you can include this anywhere in your app using cbLivewire's `livewire()` helper method.
 
-```text
+```markup
 // File ./layouts/main.cfm
 
 ...
