@@ -11,7 +11,8 @@ You can fire events from within views, components, or by using the global `Livew
 ### From View
 
 ```javascript
-<button wire:click="$emit('postAdded')">
+<button
+    wire:click="$emit('postAdded')">
 ```
 
 ### From Component
