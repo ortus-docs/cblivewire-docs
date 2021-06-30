@@ -13,7 +13,7 @@ description: >-
 
 **What if there was a way to build dynamic web applications that look and feel just like your Vue or React web apps, with little to no JavaScript, and while never leaving CFML?**
 
-Impossible you say? Nay we say! Introducing **cbLivewire**.
+Impossible you say? **Nay** we say! Introducing **cbLivewire : Reactivate your CFML!**
 
 ## A real-time search component built with cbLivewire in minutes...
 
