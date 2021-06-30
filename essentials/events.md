@@ -1,7 +1,7 @@
 # Events
 
 {% hint style="info" %}
-> Livewire components can communicate with each other through a global event system. As long as two Livewire components are living on the same page, they can communicate using events and listeners. [https://laravel-livewire.com/docs/2.x/events](https://laravel-livewire.com/docs/2.x/events)
+> LivewireJS components can communicate with each other through a global event system. As long as two LivewireJS components are living on the same page, they can communicate using events and listeners. [https://laravel-livewire.com/docs/2.x/events](https://laravel-livewire.com/docs/2.x/events)
 {% endhint %}
 
 ## Firing Events
