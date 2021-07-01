@@ -6,7 +6,7 @@ You can fire events from within views, components, or by using the global `cbwir
 
 ```javascript
 <button
-    wire:click="$emit('postAdded')">
+    wire:click="$emit( 'postAdded' )">
 ```
 
 ### From Component
