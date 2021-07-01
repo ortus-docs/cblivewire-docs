@@ -2,13 +2,13 @@
 
 ## Installing cbwire
 
-With [CommandBox](https://commandbox.ortusbooks.com/) installed, you can install _cbwire_ by running the following command from your project's root folder.
+With [CommandBox](https://commandbox.ortusbooks.com/) installed, you can install cbwire by running the following command from your project's root folder.
 
 `box install cbwire`
 
 ## Add To Your Layout
 
-In order for _cbwire_ to do its magic, you will need to place the `wireStyles()`  and `wireScripts()` helper methods in your layout view file. 
+In order for cbwire to do its magic, you will need to place the `wireStyles()`  and `wireScripts()` helper methods in your layout view file. 
 
 ```javascript
 // File: ./layouts/main.cfm
