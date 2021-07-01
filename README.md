@@ -64,7 +64,7 @@ component
 </cfoutput>
 ```
 
-Now that you've defined your **cbwire** component and view, you can include this anywhere in your app using our `wire()` helper method.
+Now that you've defined your _cbwire_ component and view, you can include this anywhere in your app using our `wire()` helper method.
 
 ```markup
 // File ./layouts/main.cfm
