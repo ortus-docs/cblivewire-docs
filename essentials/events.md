@@ -1,12 +1,6 @@
 # Events
 
-{% hint style="info" %}
-> LivewireJS components can communicate with each other through a global event system. As long as two LivewireJS components are living on the same page, they can communicate using events and listeners. [https://laravel-livewire.com/docs/2.x/events](https://laravel-livewire.com/docs/2.x/events)
-{% endhint %}
-
-## Firing Events
-
-You can fire events from within views, components, or by using the global `Livewire` JavaScript object.
+You can fire events from within views, components, or by using the global `cbwire` JavaScript object.
 
 ### From View
 
@@ -25,7 +19,7 @@ this.$emit( "postAdded" );
 
 ```javascript
 <script>
-    Livewire.emit('postAdded')
+    cbwire.emit( 'postAdded' )
 </script>
 ```
 
@@ -81,7 +75,7 @@ component extends="cbwire.models.Component"{
 
 ```javascript
 <script>
-Livewire.on('postAdded', postId => {
+cbwire.on('postAdded', postId => {
     alert('A post was added with the id of: ' + postId);
 })
 </script>
