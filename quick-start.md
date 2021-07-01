@@ -1,14 +1,14 @@
 # Quick Start
 
-## Installing cbLivewire
+## Installing cbwire
 
-With [CommandBox](https://commandbox.ortusbooks.com/) installed, you can install cbLivewire by running the following command from your project's root folder.
+With [CommandBox](https://commandbox.ortusbooks.com/) installed, you can install _cbwire_ by running the following command from your project's root folder.
 
-`box install cbLivewire`
+`box install cbwire`
 
 ## Add To Your Layout
 
-In order for Livewire to do its magic, you will need to place the `livewireStyles()`  and `livewireScripts()` helper methods in your layout view file. 
+In order for _cbwire_ to do its magic, you will need to place the `wireStyles()`  and `wireScripts()` helper methods in your layout view file. 
 
 ```javascript
 // File: ./layouts/main.cfm
@@ -17,15 +17,15 @@ In order for Livewire to do its magic, you will need to place the `livewireStyle
 <!doctype html>
 <html>
 <head>
-	#livewireStyles()#
+	#wireStyles()#
 </head>
 <body>
-	<h1>cbLivewire Is Awesome</h1>
+	<h1>cbwire is fire!</h1>
 	<div>
 		#renderView()#
 	</div>
 
-	#livewireScripts()#
+	#wireScripts()#
 </body>
 </html>
 </cfoutput>

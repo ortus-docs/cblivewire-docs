@@ -18,7 +18,7 @@ You can fire events from within views, components, or by using the global `Livew
 ### From Component
 
 ```javascript
-this.$emit('postAdded');
+this.$emit( "postAdded" );
 ```
 
 ### From Javascript Global
@@ -34,7 +34,7 @@ this.$emit('postAdded');
 You can register event listeners on a component by defining `this.$listeners` .
 
 ```javascript
-component extends="cbLivewire.models.Component"{
+component extends="cbwire.models.Component"{
 
 	this.$listeners = {
 		"postAdded": "incrementPostCount"
@@ -65,7 +65,7 @@ This is because JavaScript keys names are case sensitive, and surrounding your l
 If you need to dynamically name your event listeners, you can do so by overriding the $getListeners\(\) method on your component instead of using `this.$listeners`.
 
 ```javascript
-component extends="cbLivewire.models.Component"{
+component extends="cbwire.models.Component"{
 
 	function $getListeners(){
 		return {

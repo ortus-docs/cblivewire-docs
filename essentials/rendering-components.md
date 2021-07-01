@@ -5,11 +5,11 @@ You must have a`$renderIt()`method defined on your CFML component, otherwise a  
 {% endhint %}
 
 {% hint style="info" %}
-Be sure that your rendered HTML includes an outer element such as `<div>` that cbLivewire can bind to. If an outer element is not detected, an `OuterElementNotFound` exception is thrown
+Be sure that your rendered HTML includes an outer element such as `<div>` that cbwire can bind to. If an outer element is not detected, an `OuterElementNotFound` exception is thrown
 {% endhint %}
 
 ```javascript
-// File: ./views/livewire/myComponent.cfm
+// File: ./views/wires/myComponent.cfm
 
 <!--- GOOD --->
 <cfoutput>
