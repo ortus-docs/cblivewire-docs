@@ -1,8 +1,7 @@
 ---
 description: >-
-  cbLivewire is a drop-in module for ColdBox that makes building
-  dynamic/reactive interfaces incredibly easy, without leaving the comfort of
-  ColdBox and CFML.
+  cbwire is a drop-in module for ColdBox that makes building dynamic/reactive
+  interfaces incredibly easy, without leaving the comfort of ColdBox and CFML.
 ---
 
 # Introduction
