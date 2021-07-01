@@ -8,9 +8,9 @@ description: >-
 
 ## cbwire - v1.0
 
-**There's so much to building modern web apps these days.** [ColdBox](https://coldbox.ortusbooks.com/) makes things easy for us on the server-side, but what about our front-end development? ****JavaScript frameworks such as Vue and React are incredibly powerful and have changed the way most of us build web apps, but they've also introduced a great deal of complexity, as well as a significant learning curve when creating our applications.
+**There's so much to building modern web apps these days.** [_ColdBox_](https://coldbox.ortusbooks.com/) __makes things easy for us on the server-side, but what about our front-end development? ****JavaScript frameworks such as _Vue_ and _React_ are incredibly powerful and have changed the way most of us build web apps, but they've also introduced a great deal of complexity, as well as a significant learning curve when creating our applications.
 
-**What if there was a way to build dynamic web applications that look and feel just like your Vue or React web apps, with little to no JavaScript, and while never leaving CFML?**
+**What if there was a way to build dynamic web applications that look and feel just like your** _**Vue**_ **or** _**React**_ **web apps, with little to no JavaScript, and while never leaving CFML?**
 
 Impossible you say? **Nay** we say! Introducing **cbwire : Reactivate your CFML!**
 
@@ -93,7 +93,7 @@ More reflecting...
 * We didn't have to worry about _webpack_ configuration or compilation. 
 * We didn't create an API endpoint or worry about any of the complexities that an API introduces.
 * We never left CFML.
-* We used awesome baked-in _ColdBox_ features, such as view rendering and dependency injection w/ [_WireBox_](https://wirebox.ortusbooks.com/).
+* We used awesome baked-in [_ColdBox_](https://coldbox.org/) features, such as view rendering and dependency injection w/ [_WireBox_](https://wirebox.ortusbooks.com/).
 
 ## Unreal, right?
 
@@ -101,7 +101,7 @@ We're just getting warmed up! Browse through the other sections of this document
 
 ## Credits
 
-_cbwire_ wouldn't even exist if it wasn't for the awesome efforts of Caleb Porzio \( creator of [_Livewire_](https://laravel-livewire.com/), also [_Alpine.js_](https://github.com/alpinejs/alpine) \) and the PHP Laravel community. Livewire was originally created for use with the PHP framework Laravel. _cbwire_ is a port of the existing functionality over to CFML and the ColdBox framework.
+_cbwire_ wouldn't even exist if it wasn't for the awesome efforts of Caleb Porzio \( creator of [_Livewire_](https://laravel-livewire.com/), also [_Alpine.js_](https://github.com/alpinejs/alpine) \) and the PHP _Laravel_ community. _Livewire_ was originally created for use with the PHP framework _Laravel_. _cbwire_ is a port of the existing functionality over to CFML and the _ColdBox_ framework.
 
-The _cbwire_ module for ColdBox is written and maintained by Grant Copley, Luis Majano, and [Ortus Solutions](https://www.ortussolutions.com/).
+The _cbwire_ module for _ColdBox_ is written and maintained by Grant Copley, Luis Majano, and [Ortus Solutions](https://www.ortussolutions.com/).
 
