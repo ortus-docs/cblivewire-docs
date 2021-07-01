@@ -14,10 +14,10 @@ description: >-
 
 Impossible you say? **Nay** we say! Introducing **cbwire : Reactivate your CFML!**
 
-## A real-time search component built with cbLivewire in minutes...
+## A real-time search component built with cbwire in minutes...
 
 ```javascript
-// File: ./livewire/SearchUsers.cfc
+// File: ./wires/SearchUsers.cfc
 
 component extends="cbwire.models.Component" accessors="true" {
 
@@ -29,7 +29,7 @@ component extends="cbwire.models.Component" accessors="true" {
     
     // Render our view
     function $renderIt(){
-        return this.$renderView( "_wires/searchUsers", {
+        return this.$renderView( "wires/searchUsers", {
             users: userService.findBySearch( getSearch() )
         } );
     }
@@ -39,7 +39,7 @@ component extends="cbwire.models.Component" accessors="true" {
 ```
 
 ```markup
-// File: ./views/_wires/searchUsers.cfm
+// File: ./views/wires/searchUsers.cfm
 
 <cfoutput>
 <div>
