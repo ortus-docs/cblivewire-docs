@@ -1,7 +1,8 @@
 ---
 description: >-
-  cbwire is a drop-in module for ColdBox that makes building dynamic/reactive
-  interfaces incredibly easy, without leaving the comfort of ColdBox and CFML.
+  cbwire is a drop-in module for ColdBox that makes building dynamic and
+  reactive interfaces incredibly easy, without leaving the comfort of ColdBox
+  and CFML.
 ---
 
 # Introduction
@@ -79,7 +80,7 @@ Now that you've defined your cbwire component and view, you can include this any
 ...
 ```
 
-Let's take a moment to reflect on what in the world just happened.
+Let's reflect on what just happened.
 
 1. cbwire renders the initial component out with our `.cfm` page, which means it's SEO friendly.
 2. When a user types into the search, cbwire makes an AJAX request to the server with the updated state.
@@ -92,7 +93,7 @@ More reflecting...
 * We didn't use any JavaScript.
 * We didn't have to worry about webpack configuration or compilation. 
 * We didn't create an API endpoint or worry about any of the complexities that an API introduces.
-* We never left CFML.
+* We never left CFML 🥰 .
 * We used awesome baked-in [ColdBox](https://coldbox.org/) features, such as view rendering and dependency injection w/ [WireBox](https://wirebox.ortusbooks.com/).
 
 ## Unreal, right?
