@@ -6,5 +6,5 @@ Set as `true` to throw a `WireSetterNotFound` exception if the incoming wire req
 
 ## componentLocation
 
-The relative folder name where the cbwire components are stored. Defaults to `wires`.
+The relative folder path where the cbwire components are stored. Defaults to `wires`.
 
