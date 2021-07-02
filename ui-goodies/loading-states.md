@@ -37,7 +37,7 @@ We can add `wire:loading` on our `<div>` to display _Processing Payment_ while t
 </div>
 ```
 
-After the checkout action completes, the _Processing Payment_ output will disappear.
+After the checkout action completes, the _Processing Payment_ output will disappear. 👋 
 
 ## Delay Loading State
 
