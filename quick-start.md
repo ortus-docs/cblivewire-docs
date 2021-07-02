@@ -8,7 +8,7 @@ With [CommandBox](https://commandbox.ortusbooks.com/) installed, you can install
 
 ## Add To Your Layout
 
-In order for cbwire to do its magic, you will need to place the `wireStyles()`  and `wireScripts()` helper methods in your layout view file. 
+For cbwire to do its magic, you will need to place the `wireStyles()`  and `wireScripts()` helper methods in your layout view file. 
 
 ```javascript
 // File: ./layouts/main.cfm
