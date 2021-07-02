@@ -23,7 +23,7 @@ component extends="cbwire.models.Component"{
 }
 ```
 
-We can add `wire:loading` on our HTML elements to display content when actions are running.
+We can add `wire:loading` on our `<div>` to display _Processing Payment_ while the checkout action is running.
 
 ```javascript
 // File: ./views/wires/cart.cfm
@@ -37,11 +37,11 @@ We can add `wire:loading` on our HTML elements to display content when actions a
 </div>
 ```
 
-After a user clicks the _Checkout_ button, the _Processing Payment_ output will display until the `checkout()`action has been completed. Once the action completes, the output will disappear.
+After the checkout action completes, the _Processing Payment_ output will disappear.
 
-## Delay Toggling
+## Delay Loading State
 
-Sometimes your component actions run so quickly that the user will not have time to see the elements you want to display. Even worse, they may see a flicker on the page and wonder what happened. You can add a `.delay` modifier to delay displaying your HTML elements for _200ms_.
+Sometimes your component actions complete at the speed of light, and the user doesn't have enough time to see the elements you want to be displayed. You can add a `.delay` modifier to delay showing your HTML elements for _200ms_.
 
 ```javascript
 <div wire:loading.delay>...</div>
