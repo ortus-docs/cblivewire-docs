@@ -6,6 +6,7 @@
 ## Essentials
 
 * [Installation](essentials/installation.md)
+* [Configuration](essentials/configuration.md)
 * [Creating Components](essentials/creating-components.md)
 * [Rendering Components](essentials/rendering-components.md)
 * [Properties](essentials/properties.md)
