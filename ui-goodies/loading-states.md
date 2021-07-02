@@ -1,6 +1,6 @@
 # Loading States
 
-cbwire uses AJAX requests to invoke component actions on our wire objects. There are cases when this may involve a long-running process, such as completing a cart checkout, and the page may not respond instantly to a user event like a click. cbwire allows you to effortlessly display loading states, such as showing/hiding elements, adding/removing classes, or toggling HTML attributes until the server responds.
+cbwire uses AJAX requests to invoke component actions on our wire objects. There are cases when this may involve a long-running process, such as completing a cart checkout, and the page may not respond instantly to a user event like a click. cbwire allows you to effortlessly display loading states, such as showing and hiding elements, adding and removing classes, or toggling HTML attributes until the server responds.
 
 Loading States can make your apps feel responsive and user-friendly.
 
