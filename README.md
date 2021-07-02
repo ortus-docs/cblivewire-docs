@@ -93,7 +93,7 @@ More reflecting...
 * We didn't use any JavaScript.
 * We didn't have to worry about webpack configuration or compilation. 
 * We didn't create an API endpoint or worry about any of the complexities that an API introduces.
-* We never left CFML 🥰 .
+* We never left CFML.🥰 
 * We used awesome baked-in [ColdBox](https://coldbox.org/) features, such as view rendering and dependency injection w/ [WireBox](https://wirebox.ortusbooks.com/).
 
 ## Unreal, right?
