@@ -4,7 +4,9 @@ cbwire uses AJAX requests to invoke component actions on our wire objects. There
 
 Loading States can make your apps feel responsive and user-friendly.
 
-## Quick Example
+## Toggling Elements
+
+Let's take a look at a checkout action that takes way too long.
 
 ```javascript
 // File: ./wires/Cart.cfc
@@ -12,7 +14,7 @@ Loading States can make your apps feel responsive and user-friendly.
 component extends="cbwire.models.Component"{
 
     function checkout(){
-        sleep( 5000 );
+        sleep( 5000 ); // optimize this code yo!
     }
 
     function $renderIt(){
@@ -21,7 +23,9 @@ component extends="cbwire.models.Component"{
 }
 ```
 
-```text
+We can add `wire:loading` to our HTML elements to toggle when actions are running.
+
+```javascript
 // File: ./views/wires/cart.cfm
 
 <div>
