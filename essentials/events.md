@@ -52,8 +52,6 @@ When defining your listeners, it is good to put your listener's names in quotati
 JavaScript keys names are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `POSTADDED`.
 {% endhint %}
 
-
-
 ## Dynamic Event Listeners
 
 If you need to name your event listeners dynamically, you can override the `$getListeners()` method on your cbwire component.
