@@ -1,11 +1,11 @@
 # Rendering Components
 
 {% hint style="info" %}
-You must have a`$renderIt()`method defined on your CFML component, otherwise a  `RenderMethodNotFound`exception will be thrown.
+You must have a`$renderIt()`method defined on your CFML component. Otherwise, cbwire will throw a`RenderMethodNotFound`exception.
 {% endhint %}
 
 {% hint style="info" %}
-Be sure that your rendered HTML includes an outer element such as `<div>` that cbwire can bind to. If an outer element is not detected, an `OuterElementNotFound` exception is thrown
+Be sure that cbwire can bind onto your component's view by including an outer element such as`<div>`. If an outer element is not detected, cbwire will throw a `OuterElementNotFound`exception.
 {% endhint %}
 
 ```javascript
