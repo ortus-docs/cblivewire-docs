@@ -9,15 +9,17 @@ description: >-
 
 ## cbwire - v1.0
 
-**There's so much to building modern web apps these days.** [ColdBox](https://coldbox.ortusbooks.com/) makes things easy for us on the server-side, but what about our front-end development? ****JavaScript frameworks such as Vue and React are incredibly powerful and have changed the way most of us build web apps, but they've also introduced a great deal of complexity, as well as a significant learning curve when creating our applications.
+**There's so much to building modern web apps these days.** [ColdBox](https://coldbox.ortusbooks.com/) makes things easy for us on the server-side, but what about our front-end development? ****JavaScript frameworks such as Vue and React are powerful. They have changed the way most of us build web apps, but they've also introduced a great deal of complexity, as well as a significant learning curve when creating our applications.
 
-**What if there was a way to build dynamic web applications that look and feel just like your Vue or React web apps, with little to no JavaScript, and while never leaving CFML?**
+**What if there was a way to build dynamic web applications that look and feel just like your Vue or React web apps, with little to no JavaScript, and while never leaving CFML?** Impossible, you say? **Nay,** we say!
 
-Impossible you say? **Nay** we say! Introducing **cbwire : Reactivate your CFML!**
+Introducing **cbwire: Reactivate your CFML!** 
 
 ## A real-time search component built with cbwire in minutes...
 
 ```javascript
+// File: ./wires/SearchUsers.cfc
+
 component
     extends="cbwire.models.Component"
     accessors="true"
@@ -65,7 +67,7 @@ component
 </cfoutput>
 ```
 
-Now that you've defined your cbwire component and view, you can include this anywhere in your app using our `wire()` helper method.
+Now that you've created your cbwire component and view, you can include this anywhere in your app using our `wire()` helper method.
 
 ```markup
 // File ./layouts/main.cfm
@@ -73,7 +75,10 @@ Now that you've defined your cbwire component and view, you can include this any
 ...
 <cfoutput>
 <body>
-    <!-- Renders our search users form and updates in real-time as user types -->
+    <!-- 
+        Renders our search users form and updates
+        in real-time as user types
+    -->
     #wire( "SearchUsers" )#
 </body>
 </cfoutput>
@@ -82,10 +87,10 @@ Now that you've defined your cbwire component and view, you can include this any
 
 Let's reflect on what just happened.
 
-1. cbwire renders the initial component out with our `.cfm` page, which means it's SEO friendly.
+1. cbwire renders the initial component out with our `.cfm` page, which means it's SEO- friendly.
 2. When a user types into the search, cbwire makes an AJAX request to the server with the updated state.
 3. The server re-renders the component and responds with the new HTML.
-4. cbwire utilitizes the amazing [Livewire](https://laravel-livewire.com/) JavaScript library to intelligently mutate the DOM based on our state changes.
+4. cbwire utilizes the amazing [Livewire](https://laravel-livewire.com/) JavaScript library to mutate the DOM based on our state changes.
 
 More reflecting...
 
@@ -98,11 +103,13 @@ More reflecting...
 
 ## Unreal, right?
 
-We're just getting warmed up! Browse through the other sections of this documentation to see just how much cbwire can transform your applications and improve your development experience. This has changed the way we are building apps, and we think you're going to love it also.
+We're just getting warmed up! cbwire has changed the way we are building apps, and we think you're going to love it also. 
+
+Browse through the other sections of this documentation to see just how much cbwire can transform your applications and improve your development experience. 
 
 ## Credits
 
-cbwire wouldn't even exist if it wasn't for the awesome efforts of Caleb Porzio \( creator of [Livewire](https://laravel-livewire.com/), also [Alpine.js](https://github.com/alpinejs/alpine) \) and the PHP Laravel community. Livewire was originally created for use with the PHP framework Laravel. cbwire is a port of the existing functionality over to CFML and the ColdBox framework.
+cbwire wouldn't even exist if it wasn't for the awesome efforts of Caleb Porzio \( creator of [Livewire](https://laravel-livewire.com/), also [Alpine.js](https://github.com/alpinejs/alpine) \) and the PHP Laravel community. Livewire was created for use with the PHP framework Laravel. cbwire is a port of the existing functionality over to CFML and the ColdBox framework.
 
 The cbwire module for ColdBox is written and maintained by Grant Copley, Luis Majano, and [Ortus Solutions](https://www.ortussolutions.com/).
 
