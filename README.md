@@ -101,11 +101,11 @@ More reflecting...
 * We never left CFML.🥰 
 * We used awesome baked-in [ColdBox](https://coldbox.org/) features, such as view rendering and dependency injection w/ [WireBox](https://wirebox.ortusbooks.com/).
 
-## Unreal, right?
+## Fantastic, right?
 
-We're just getting warmed up! cbwire has changed the way we are building apps, and we think you're going to love it also. 
+We're just getting warmed up! cbwire has transformed the way we are building apps, and we think you're going to love it also. 
 
-Browse through the other sections of this documentation to see just how much cbwire can transform your applications and improve your development experience. 
+Browse through the other sections of this documentation to see just how much cbwire can modernize your applications and improve your development experience. 
 
 ## Credits
 
