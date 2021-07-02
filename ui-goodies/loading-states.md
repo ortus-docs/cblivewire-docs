@@ -23,7 +23,7 @@ component extends="cbwire.models.Component"{
 }
 ```
 
-We can add `wire:loading` on our `<div>` to display _Processing Payment_ while the checkout action is running.
+We can annotate our `<div>` with `wire:loading` to display _Processing Payment_ while the checkout action is running.
 
 ```javascript
 // File: ./views/wires/cart.cfm
@@ -44,17 +44,37 @@ After the checkout action completes, the _Processing Payment_ output will disapp
 Sometimes your component actions complete at the speed of light, and the user doesn't have enough time to see the elements you want to be displayed. You can add a `.delay` modifier to delay showing your HTML elements for _200ms_.
 
 ```javascript
+// File: ./views/wires/cart.cfm
+
 <div wire:loading.delay>...</div>
 ```
 
 ##  Display Property
 
-Loading elements are set with a CSS property of `display: inline-block;` by default. You can override this behavior by using various modifiers.
+Loading State elements are set with a CSS property of `display: inline-block;` by default. You can override this behavior by using various annotation modifiers.
 
 ```javascript
+// File: ./views/wires/cart.cfm
+
 <div wire:loading.flex>...</div>
 <div wire:loading.grid>...</div>
 <div wire:loading.inline>...</div>
 <div wire:loading.table>...</div>
+```
+
+## Hide During Loading State
+
+If you would like to display an element EXCEPT during a loading state, you can apply the `wire:loading.remove` annotation.
+
+```javascript
+// File: ./views/wires/cart.cfm
+
+<div>
+    <button wire:click="checkout">Checkout</button>
+
+    <div wire:loading.remove>
+        Hide Me While Loading...
+    </div>
+</div>
 ```
 
