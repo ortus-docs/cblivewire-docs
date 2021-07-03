@@ -20,17 +20,16 @@ Introducing **cbwire: Reactivate your CFML!**
 ```javascript
 // File: ./wires/SearchUsers.cfc
 
-component
-    extends="cbwire.models.Component"
-{
+component extends="cbwire.models.Component" {
 
     // Wirebox injection ( wee! )
     property
         name="userService"
         inject="UserService@MyModule";
 
-    // Local data property that hold's the search typed into the UI
+    // Our local data properties
     this.$data = {
+        // Hold's the search typed into the UI
         "search": ""
     };
 
