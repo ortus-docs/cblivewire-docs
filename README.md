@@ -22,7 +22,6 @@ Introducing **cbwire: Reactivate your CFML!**
 
 component
     extends="cbwire.models.Component"
-    accessors="true"
 {
 
     // Wirebox injection ( wee! )
@@ -30,16 +29,16 @@ component
         name="userService"
         inject="UserService@MyModule";
 
-    // Local property that hold's the search typed into the UI
-    property
-        name="search"
-        default="";
+    // Local data property that hold's the search typed into the UI
+    this.$data = {
+        "search": ""
+    };
 
     // Render our view
     function $renderIt(){
         return this.$renderView(
             "wires/searchUsers",
-            { "users" : userService.findBySearch( getSearch() ) }
+            { "users" : userService.findBySearch( this.$data.search ) }
         );
     }
 
