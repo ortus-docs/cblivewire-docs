@@ -9,7 +9,7 @@
 * [Configuration](essentials/configuration.md)
 * [Creating Components](essentials/creating-components.md)
 * [Rendering Components](essentials/rendering-components.md)
-* [Properties](essentials/properties.md)
+* [Data Properties](essentials/properties.md)
 * [Actions](essentials/actions.md)
 * [Events](essentials/events.md)
 * [Lifecycle Hooks](essentials/lifecycle-hooks.md)

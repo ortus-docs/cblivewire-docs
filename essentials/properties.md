@@ -1,4 +1,4 @@
-# Properties
+# Data Properties
 
 TODO
 
