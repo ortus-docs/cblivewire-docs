@@ -17,15 +17,15 @@ For cbwire to do its magic, you will need to place the `wireStyles()`  and `wire
 <!doctype html>
 <html>
 <head>
-	#wireStyles()#
+    #wireStyles()#
 </head>
 <body>
-	<h1>cbwire is fire!</h1>
-	<div>
-		#renderView()#
-	</div>
+    <h1>cbwire is fire!</h1>
+    <div>
+        #renderView()#
+    </div>
 
-	#wireScripts()#
+    #wireScripts()#
 </body>
 </html>
 </cfoutput>
