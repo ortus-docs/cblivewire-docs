@@ -4,13 +4,16 @@
 
 ### this.$postEmit\( string eventName, array parameters \)
 
-Executes before and after the current cbwire component emits an event. The parameters are provided as an array instead of a named struct because the underlining Livewire engine requires the order to be preserved for emitted events.
+Executes before and after **the current** cbwire component emits an event. The parameters are provided as an array instead of a named struct because the underlining Livewire engine requires the order to be preserved for emitted events.
 
 ```javascript
 // File: ./wires/MovieList.cfc
 
 component extends="cbwire.models.Component"{
 
+    /**
+    * Fire an event when the user clicks a button.
+    */
     function clickButton(){
         this.$emit( "IndianaJones", [ "And","The","Last","Crusade" );
     }
@@ -23,7 +26,7 @@ component extends="cbwire.models.Component"{
         // Fires after we emit "IndianaJones"         
     }
 
-    function renderIt(){
+    function $renderIt(){
         return this.$renderView( "wires/movieList" );
     }
     
