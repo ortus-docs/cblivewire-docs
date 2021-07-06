@@ -6,50 +6,50 @@ You can fire events from within views, components, or by using the global `cbwir
 
 ```javascript
 <button
-    wire:click="$emit( 'postAdded' )">
+    wire:click="$emit( 'movieAdded' )">
 ```
 
 ### From Component
 
 ```javascript
-this.$emit( "postAdded" );
+this.$emit( "movieAdded" );
 ```
 
 ### From Javascript Global
 
 ```javascript
 <script>
-    cbwire.emit( 'postAdded' )
+    cbwire.emit( 'movieAdded' )
 </script>
 ```
 
 ## Event Listeners
 
-You can register event listeners on a component by defining `this.$listeners`.
+You can register event listeners on a component by defining `variables.$listeners`.
 
 ```javascript
 component extends="cbwire.models.Component"{
 
-	this.$listeners = {
-		"postAdded": "incrementPostCount"
+	variables.$listeners = {
+		"movieAdded": "tellEveryone"
 	};
 
-	function incrementPostCount(){
-		// This is called when the postAdded event is emitted.
+	function tellEveryone(){
+		// This is called when the movieAdded event is emitted.
 	}
 
 	...
 }
 ```
 
-cbwire will invoke the `incrementPostCount` method on the component if any other component on the same page emits a `postAdded` event. 
+cbwire will invoke the `tellEveryone` method on the component if any other component on the same page emits a `movieAdded` event. 
 
 {% hint style="info" %}
 When defining your listeners, it is good to put your listener's names in quotation marks, as we have in our component above.   
   
-`"postAdded": "incrementPostCount"`
+`"movieAdded": "tellEveryone"`
 
-JavaScript keys names are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `POSTADDED`.
+JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `POSTADDED`.
 {% endhint %}
 
 ## Dynamic Event Listeners
@@ -61,7 +61,7 @@ component extends="cbwire.models.Component"{
 
     function $getListeners(){
         return {
-		 	      "postAdded": "postListener#0 + 1#" // postListener1
+		 	      "movieAdded": "tellEvery#0 + 1#" // tellEvery1
 		    }
 	  }
 	...
@@ -73,8 +73,8 @@ component extends="cbwire.models.Component"{
 ```javascript
 // File: ./views/wires/myView.cfm
 <script>
-    cbwire.on('postAdded', postId => {
-        alert('A post was added with the id of: ' + postId);
+    cbwire.on( 'movieAdded', movieId => {
+        alert( 'A movie was added with the id of: ' + movieId );
     })
 </script>
 ```
