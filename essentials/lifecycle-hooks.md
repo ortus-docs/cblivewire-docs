@@ -35,7 +35,7 @@ component extends="cbwire.models.Component"{
 ```
 
 {% hint style="info" %}
-The `$preEmit` and `$postEmit` lifecycle hooks are executed when events are emitted within the same component, not when events are emitted from other components.
+The `$preEmit` and `$postEmit` lifecycle hooks are executed when events are emitted **within the same component**, not when events are emitted from other components.
 {% endhint %}
 
 ##  
