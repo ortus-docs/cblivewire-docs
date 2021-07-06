@@ -1,8 +1,7 @@
 ---
 description: >-
-  cbwire is a drop-in module for ColdBox that makes building dynamic and
-  reactive interfaces incredibly easy, without leaving the comfort of ColdBox
-  and CFML.
+  cbwire is a module for ColdBox that makes building dynamic and reactive
+  interfaces incredibly easy, without leaving the comfort of ColdBox and CFML.
 ---
 
 # Introduction
@@ -15,20 +14,20 @@ description: >-
 
 Introducing **cbwire: Reactivate your CFML!** 
 
-## A real-time search component built with cbwire in minutes...
+## A real-time movie search component built with cbwire in minutes...
 
 ```javascript
-// File: ./wires/SearchUsers.cfc
+// File: ./wires/SearchMovies.cfc
 
 component extends="cbwire.models.Component" {
 
     // Wirebox injection ( wee! )
     property
-        name="userService"
-        inject="UserService@MyModule";
+        name="movieService"
+        inject="MovieService@MyModule";
 
     // Our local data properties
-    this.$data = {
+    variables.$data = {
         // Hold's the search typed into the UI
         "search": ""
     };
@@ -36,8 +35,8 @@ component extends="cbwire.models.Component" {
     // Render our view
     function $renderIt(){
         return this.$renderView(
-            "wires/searchUsers",
-            { "users" : userService.findBySearch( this.$data.search ) }
+            "wires/searchMovies",
+            { "movies" : movieService.findBySearch( variables.$data.search ) }
         );
     }
 
@@ -46,19 +45,19 @@ component extends="cbwire.models.Component" {
 ```
 
 ```markup
-// File: ./views/wires/searchUsers.cfm
+// File: ./views/wires/searchMovies.cfm
 
 <cfoutput>
 <div>
     <input 
         wire:model="search" 
         type="text" 
-        placeholder="Search users..."
+        placeholder="Search movies..."
     />
 
     <ul>
-        <cfloop array="#args.users#" index="user">
-            <li>#user.getUsername()#</li>
+        <cfloop array="#args.movies#" index="movie">
+            <li>#movie.getName()#</li>
         </cfloop>
     </ul>
 </div>
@@ -74,10 +73,10 @@ Now that you've created your cbwire component and view, you can include this any
 <cfoutput>
 <body>
     <!-- 
-        Renders our search users form and updates
+        Renders our movie search form and updates
         in real-time as user types
     -->
-    #wire( "SearchUsers" )#
+    #wire( "SearchMovies" )#
 </body>
 </cfoutput>
 ...
