@@ -4,7 +4,7 @@
 
 ### this.$postEmit\( string eventName, array parameters \)
 
-Executes before and after **the current** cbwire component emits an event. The parameters are provided as an array instead of a named struct because the underlining Livewire engine requires the order to be preserved for emitted events.
+Executes before and after **the current** cbwire component emits **any** event. The parameters are provided as an array instead of a named struct because the underlining Livewire engine requires the order to be preserved for emitted events.
 
 ```javascript
 // File: ./wires/MovieList.cfc
