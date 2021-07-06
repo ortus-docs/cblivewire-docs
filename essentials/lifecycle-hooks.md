@@ -38,6 +38,20 @@ component extends="cbwire.models.Component"{
 The `$preEmit` and `$postEmit` lifecycle hooks are executed when events are emitted **within the same component**, not when events are emitted from other components.
 {% endhint %}
 
+You can also target specific emits by appending the event to your function name, such as `$preEmitIndianaJones` and `$postEmitIndianaJones`.
+
+```javascript
+// File: ./wires/MovieList.cfc
+
+component extends="cbwire.models.Component"{
+    ...
+    function $preEmitIndianaJones( parameters ){}
+    
+    function $postEmitIndianaJones( parameters ){}
+    ...
+}
+```
+
 ##  
 
 ### $preHyrdrate\( wireRequest \) 
@@ -59,8 +73,6 @@ The `$preEmit` and `$postEmit` lifecycle hooks are executed when events are emit
 ### $preListener\( listener \)
 
 ### $postListener\( listener \)
-
-### $preEmit\( event, args \)
 
 ### $preEmitEventname\( args \)
 
