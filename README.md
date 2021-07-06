@@ -1,16 +1,16 @@
 ---
 description: >-
-  cbwire is a module for ColdBox that makes building dynamic and reactive
-  interfaces incredibly easy, without leaving the comfort of ColdBox and CFML.
+  cbwire is a ColdBox module that makes building reactive, dynamic, and modern
+  interfaces delightfully easy without leaving the comfort of CFML.
 ---
 
 # Introduction
 
 ## cbwire - v1.0
 
-**There's so much to building modern web apps these days.** [ColdBox](https://coldbox.ortusbooks.com/) makes things easy for us on the server-side, but what about our front-end development? ****JavaScript frameworks such as Vue and React are powerful. They have changed the way most of us build web apps, but they've also introduced a great deal of complexity, as well as a significant learning curve when creating our applications.
+Building modern CFML apps has become a bit complicated. [ColdBox](https://coldbox.ortusbooks.com/) makes things easy for us on the server-side, but what about our front-end development? Front-end frameworks such as Vue and React have transformed our apps and are undoubtedly powerful, but they’ve also introduced some complexity, as well as a significant learning curve when creating web applications.
 
-**What if there was a way to build dynamic web applications that look and feel just like your Vue or React web apps, with little to no JavaScript, and while never leaving CFML?** Impossible, you say? **Nay,** we say!
+What if you could create applications that look and feel just like your Vue or React web apps, but written mostly with CFML. Impossible, you say? Nay, we say!
 
 Introducing **cbwire: Reactivate your CFML!** 
 
