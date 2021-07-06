@@ -1,7 +1,7 @@
 # Rendering Components
 
 {% hint style="info" %}
-You must have a`$renderIt()`method defined on your CFML component. Otherwise, cbwire will throw a`RenderMethodNotFound`exception.
+You must have a public`$renderIt()`method defined on your CFML component. Otherwise, cbwire will throw a`RenderMethodNotFound`exception.
 {% endhint %}
 
 {% hint style="info" %}
@@ -9,18 +9,18 @@ Be sure that cbwire can bind onto your component's view by including an outer el
 {% endhint %}
 
 ```javascript
-// File: ./views/wires/myComponent.cfm
+// File: ./views/wires/rentMovie.cfm
 
 <!--- GOOD --->
 <cfoutput>
     <div>
-        <button wire:click="doSomething">Do Something</button>
+        <button wire:click="rentMovie">Rent Movie</button>
     </div>
 </cfoutput>
 
 <!--- BAD --->
 <cfoutput>
-    <button wire:click="doSomething">Do Something</button>
+    <button wire:click="rentMovie">Rent Movie</button>
 </cfoutput>
 ```
 
