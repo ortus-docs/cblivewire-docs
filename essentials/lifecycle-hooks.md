@@ -74,12 +74,6 @@ component extends="cbwire.models.Component"{
 
 ### $postListener\( listener \)
 
-### $preEmitEventname\( args \)
-
-### $postEmit\( event, args \)
-
-### $postEmitEventname\( args \)
-
 ### $preAction
 
 ### $postAction
