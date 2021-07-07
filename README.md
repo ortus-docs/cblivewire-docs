@@ -108,7 +108,7 @@ Browse through the other sections of this documentation to see just how much cbw
 
 cbwire wouldn't even exist if it wasn't for the impressive efforts of Caleb Porzio \( creator of [Livewire](https://laravel-livewire.com/), also [Alpine.js](https://github.com/alpinejs/alpine) \) and the PHP Laravel community. Caleb created Livewire for use with the PHP framework Laravel. cbwire is a port of the Livewire functionality to ColdBox and CFML, with some additional goodies sprinkled in.
 
-The cbwire module for ColdBox is written and maintained by Grant Copley, Luis Majano, and [Ortus Solutions](https://www.ortussolutions.com/).
+The cbwire module for ColdBox is written and maintained by [Grant Copley](https://twitter.com/grantcopley), Luis Majano, and [Ortus Solutions](https://www.ortussolutions.com/).
 
 ## Project Support
 
