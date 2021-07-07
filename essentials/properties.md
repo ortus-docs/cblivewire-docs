@@ -72,7 +72,7 @@ You can also reference any defined properties from your cbwire component view us
 </cfoutput>
 ```
 
-## Important Things To Know
+## Things To Know
 
 Your component's private `variables` scope will hold your data property definitions and current values, which is seemingly secure, but it's necessary to be cautious about what you store. cbwire communicates with the server via background AJAX requests and includes the current state of the data properties within those requests.
 
