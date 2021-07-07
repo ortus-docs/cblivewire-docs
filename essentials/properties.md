@@ -1,5 +1,7 @@
 # Data Properties
 
+## Initializing Properties
+
 Similar to VueJS and other frontend JavaScript frameworks, you can define and initialize reactive properties on your cbwire components using `variables.$data`. When data properties are mutated, the UI will update also.
 
 ```javascript
