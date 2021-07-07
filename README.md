@@ -86,7 +86,7 @@ Now that you've created your cbwire component and view, you can include this any
 
 Let's reflect on what just happened.
 
-1. cbwire renders the initial component out with our `.cfm` page, which means it's SEO- friendly.
+1. cbwire renders the initial component with our `.cfm` page, which means it's SEO- friendly.
 2. When a user types into the search, cbwire makes an AJAX request to the server with the updated state.
 3. The server re-renders the component and responds with the new HTML.
 4. cbwire utilizes the excellent [Livewire](https://laravel-livewire.com/) JavaScript library to mutate the DOM based on our state changes.
