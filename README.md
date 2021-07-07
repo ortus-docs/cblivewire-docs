@@ -14,7 +14,7 @@ Building modern CFML apps has become a bit complicated. [ColdBox](https://coldbo
 
 What if you could create applications that look and feel just like your Vue or React web apps but written primarily with CFML. Impossible, you say? Nay, we say!
 
-Introducing **cbwire: Reactivate your CFML!** 
+Introducing **cbwire: Power-up your CFML!** 
 
 ## A real-time movie search component built with cbwire in minutes...
 

@@ -1,7 +1,3 @@
----
-description: For those who like to cook with gas.
----
-
 # Quick Start
 
 ## Installing cbwire
