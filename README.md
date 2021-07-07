@@ -92,7 +92,7 @@ Let's reflect on what just happened.
 4. cbwire utilizes the excellent [Livewire](https://laravel-livewire.com/) JavaScript library to mutate the DOM based on our state changes.
 
 * We built a real-time search in a matter of just a few minutes.
-* We didn't use any JavaScript.
+* We didn't write any JavaScript.
 * We didn't have to worry about webpack configuration or compilation. 
 * We didn't create an API endpoint or worry about any of the complexities that an API introduces.
 * We never left CFML.🤓 
