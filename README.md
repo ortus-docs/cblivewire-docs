@@ -112,5 +112,5 @@ The cbwire module for ColdBox is written and maintained by [Grant Copley](https:
 
 ## Project Support
 
-If cbwire makes you 😍 , please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
+If cbwire makes you😍, please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
 
