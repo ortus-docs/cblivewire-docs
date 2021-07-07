@@ -1,6 +1,6 @@
 ---
 description: >-
-  Similar to VueJS and other frontend JavaScript frameworks, you can define and
+  Similar to Vue.js and other frontend JavaScript frameworks, you can define and
   initialize reactive properties on your cbwire components.
 ---
 
