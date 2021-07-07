@@ -64,12 +64,12 @@ You can also reference any defined properties from your cbwire component view us
 
 Your component's private variables scope will store your data property definitions and current values, but it's necessary to be cautious about what you store. cbwire communicates with the server via background AJAX requests and includes the current state of the data properties within those requests.
 
-{% hint style="info" %}
-cbwire includes the current state of the data properties during requests in order to determine what has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
-{% endhint %}
-
 {% hint style="warning" %}
 You should never store sensitive data \( such as passwords \) that you wouldn't want your application's users to see.
+{% endhint %}
+
+{% hint style="info" %}
+cbwire includes the current state of the data properties during requests in order to determine what has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 {% endhint %}
 
 
