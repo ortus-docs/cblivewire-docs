@@ -95,7 +95,7 @@ Let's reflect on what just happened.
 * We didn't use any JavaScript.
 * We didn't have to worry about webpack configuration or compilation. 
 * We didn't create an API endpoint or worry about any of the complexities that an API introduces.
-* We never left CFML.🥰 
+* We never left CFML. 🤓 
 * We used baked-in [ColdBox](https://coldbox.org/) features, such as view rendering and dependency injection w/ [WireBox](https://wirebox.ortusbooks.com/).
 
 ## Fantastic, right?
@@ -112,5 +112,5 @@ The cbwire module for ColdBox is written and maintained by Grant Copley, Luis Ma
 
 ## Project Support
 
-If cbwire makes you happy, please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
+If cbwire makes you 😍 , please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
 
