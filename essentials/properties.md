@@ -72,16 +72,20 @@ You can also reference any defined properties from your cbwire component view us
 </cfoutput>
 ```
 
-## Security
+## Important Things To Know
 
-Your component's private variables scope will store your data property definitions and current values, but it's necessary to be cautious about what you store. cbwire communicates with the server via background AJAX requests and includes the current state of the data properties within those requests.
-
-{% hint style="warning" %}
-You should never store sensitive data \( such as passwords \) that you wouldn't want your application's users to see.
-{% endhint %}
+Your component's private `variables` scope will hold your data property definitions and current values, which is seemingly secure, but it's necessary to be cautious about what you store. cbwire communicates with the server via background AJAX requests and includes the current state of the data properties within those requests.
 
 {% hint style="success" %}
-cbwire includes the current state of the data properties during requests to determine what has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+cbwire includes the current values of the data properties during requests to determine what state has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+{% endhint %}
+
+{% hint style="danger" %}
+You should NEVER store sensitive data \( such as passwords, SSNs \) that you wouldn't want your application's users to see.
+{% endhint %}
+
+{% hint style="info" %}
+Data properties can only be data types that are castable to JavaScript data types, such as CFML strings, numeric, arrays, structs, or booleans.
 {% endhint %}
 
 
