@@ -1,8 +1,18 @@
+---
+description: >-
+  Similar to VueJS and other frontend JavaScript frameworks, you can define and
+  initialize reactive properties on your cbwire components.
+---
+
 # Data Properties
 
 ## Initializing Properties
 
-Similar to VueJS and other frontend JavaScript frameworks, you can define and initialize reactive properties on your cbwire components using `variables.$data`. When data properties are mutated, the UI will update also.
+You can define and initialize reactive properties on your cbwire components using `variables.$data`. 
+
+{% hint style="success" %}
+When data properties are mutated, the UI will update also.
+{% endhint %}
 
 ```javascript
 // File: wires/BestMovies.cfc
@@ -70,8 +80,8 @@ Your component's private variables scope will store your data property definitio
 You should never store sensitive data \( such as passwords \) that you wouldn't want your application's users to see.
 {% endhint %}
 
-{% hint style="info" %}
-cbwire includes the current state of the data properties during requests in order to determine what has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+{% hint style="success" %}
+cbwire includes the current state of the data properties during requests to determine what has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 {% endhint %}
 
 
