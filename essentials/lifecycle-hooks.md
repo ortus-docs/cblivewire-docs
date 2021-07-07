@@ -1,10 +1,10 @@
 # Lifecycle Hooks
 
-###  this.$preEmit\( string eventName, array parameters \)
+###  this.$preEmit\( string eventName, struct parameters \)
 
-### this.$postEmit\( string eventName, array parameters \)
+### this.$postEmit\( string eventName, struct parameters \)
 
-Executes before and after **the current** cbwire component emits **any** event. The parameters are provided as an array instead of a named struct because the underlining JavaScript engine requires the order to be preserved for emitted events.
+Executes before and after **the current** cbwire component emits **any** event.
 
 ```javascript
 // File: ./wires/MovieList.cfc
@@ -18,11 +18,11 @@ component extends="cbwire.models.Component"{
         this.$emit( "IndianaJones", [ "And","The","Last","Crusade" );
     }
 
-    function $preEmit( eventName, parameters ){
+    function $preEmit( string eventName, struct parameters ){
         // Fires before we emit "IndianaJones"         
     }
     
-    function $postEmit( eventName, parameters ){
+    function $postEmit( string eventName, struct parameters ){
         // Fires after we emit "IndianaJones"         
     }
 
@@ -45,9 +45,9 @@ You can also target specific emits by appending the event to your function name,
 
 component extends="cbwire.models.Component"{
     ...
-    function $preEmitIndianaJones( parameters ){}
+    function $preEmitIndianaJones( struct parameters ){}
     
-    function $postEmitIndianaJones( parameters ){}
+    function $postEmitIndianaJones( struct parameters ){}
     ...
 }
 ```
