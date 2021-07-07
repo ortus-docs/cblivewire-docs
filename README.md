@@ -6,6 +6,8 @@ description: >-
 
 # Introduction
 
+![](.gitbook/assets/logo%20%281%29.png)
+
 ## cbwire - v1.0
 
 Building modern CFML apps has become a bit complicated. [ColdBox](https://coldbox.ortusbooks.com/) makes things easy for us on the server-side, but what about our front-end development? Front-end frameworks such as Vue and React have transformed our apps and are undoubtedly powerful. Still, they’ve also introduced some complexity and added a significant learning curve when creating web applications.
