@@ -1,6 +1,6 @@
 # Configuration
 
-Just with other Coldbox Modules, you can alter cbwire's behavior by overriding settings in your `config/ColdBox.cfc` file.
+Just with other [Coldbox Modules](https://www.forgebox.io/), you can alter cbwire's behavior by overriding settings in your `config/ColdBox.cfc` file.
 
 ```javascript
 // File: ./config/ColdBox.cfc
