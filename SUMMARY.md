@@ -17,10 +17,7 @@
 
 ## Component Features
 
-* [Validation](component-features/validation.md)
-* [Query String](component-features/query-string.md)
 * [Redirecting](component-features/redirecting.md)
-* [Flash Messages](component-features/flash-messages.md)
 
 ## UI Goodies
 

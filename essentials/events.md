@@ -18,7 +18,7 @@ You can fire events from within views, components, or by using the global `cbwir
 ### From Component
 
 ```javascript
-this.$emit( "movieAdded" );
+this.emit( "movieAdded" );
 ```
 
 ### From Javascript Global
@@ -31,12 +31,12 @@ this.$emit( "movieAdded" );
 
 ## Event Listeners
 
-You can register event listeners on a component by defining `variables.$listeners`.
+You can register event listeners on a component by defining `variables.listeners`.
 
 ```javascript
 component extends="cbwire.models.Component"{
 
-	variables.$listeners = {
+	variables.listeners = {
 		"movieAdded": "tellEveryone"
 	};
 
@@ -62,12 +62,12 @@ JavaScript keys are case-sensitive. You can preserve the key casing in CFML by s
 
 ## Dynamic Event Listeners
 
-If you need to name your event listeners dynamically, you can override the `$getListeners()` method on your cbwire component.
+If you need to name your event listeners dynamically, you can override the `getListeners()` method on your cbwire component.
 
 ```javascript
 component extends="cbwire.models.Component"{
 
-    function $getListeners(){
+    function getListeners(){
         return {
 		 	      "movieAdded": "tellEvery#0 + 1#" // tellEvery1
 		    }

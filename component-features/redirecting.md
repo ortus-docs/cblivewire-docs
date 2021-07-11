@@ -1,6 +1,6 @@
 # Redirecting
 
-You can redirect users from your cbwire components similar to how you would in ColdBox using `$relocate`.
+You can redirect users from your cbwire components similar to how you would in ColdBox using `relocate`.
 
 ```javascript
 // File: ./wires/FindADeveloper.cfc
@@ -8,11 +8,11 @@ You can redirect users from your cbwire components similar to how you would in C
 component extends="cbwire.models.Component"{
 
     function findADev(){
-        return this.$relocate( URL="https://www.ortussolutions.com" );
+        return this.relocate( URL="https://www.ortussolutions.com" );
     }
     
-    function $renderIt(){
-        return this.$renderView( "wires/findADev" );
+    function renderIt(){
+        return this.renderView( "wires/findADev" );
     }
 }
 
@@ -43,7 +43,7 @@ In fact, cbwire uses ColdBox's internal `relocate()` method, so any of the argum
  * @postProcessExempt Do not fire the postProcess interceptors
  * @statusCode The status code to use in the relocation
  */
-void function $relocate(
+void function relocate(
     event,
     URL,
     URI,

@@ -1,8 +1,8 @@
 # Lifecycle Hooks
 
-###  this.$preEmit\( string eventName, struct parameters \)
+###  this.preEmit\( string eventName, struct parameters \)
 
-### this.$postEmit\( string eventName, struct parameters \)
+### this.postEmit\( string eventName, struct parameters \)
 
 Executes before and after **the current** cbwire component emits **any** event.
 
@@ -15,19 +15,19 @@ component extends="cbwire.models.Component"{
     * Fire an event when the user clicks a button.
     */
     function clickButton(){
-        this.$emit( "IndianaJones", [ "And","The","Last","Crusade" );
+        this.emit( "IndianaJones", [ "And","The","Last","Crusade" );
     }
 
-    function $preEmit( string eventName, struct parameters ){
+    function preEmit( string eventName, struct parameters ){
         // Fires before we emit "IndianaJones"         
     }
     
-    function $postEmit( string eventName, struct parameters ){
+    function postEmit( string eventName, struct parameters ){
         // Fires after we emit "IndianaJones"         
     }
 
-    function $renderIt(){
-        return this.$renderView( "wires/movieList" );
+    function renderIt(){
+        return this.renderView( "wires/movieList" );
     }
     
 
@@ -35,50 +35,50 @@ component extends="cbwire.models.Component"{
 ```
 
 {% hint style="info" %}
-The `$preEmit` and `$postEmit` lifecycle hooks are executed when events are emitted **within the same component**, not when events are emitted from other components.
+The `preEmit` and `postEmit` lifecycle hooks are executed when events are emitted **within the same component**, not when events are emitted from other components.
 {% endhint %}
 
-You can also target specific emits by appending the event to your function name, such as `$preEmitIndianaJones` and `$postEmitIndianaJones`.
+You can also target specific emits by appending the event to your function name, such as `preEmitIndianaJones` and `postEmitIndianaJones`.
 
 ```javascript
 // File: ./wires/MovieList.cfc
 
 component extends="cbwire.models.Component"{
     ...
-    function $preEmitIndianaJones( struct parameters ){}
+    function preEmitIndianaJones( struct parameters ){}
     
-    function $postEmitIndianaJones( struct parameters ){}
+    function postEmitIndianaJones( struct parameters ){}
     ...
 }
 ```
 
 ##  
 
-### $preHyrdrate\( wireRequest \) 
+### preHyrdrate\( wireRequest \) 
 
-### $postHydrate \( wireRequest \)
+### postHydrate \( wireRequest \)
 
-### $preGetter\( dataProperty \)
+### preGetter\( dataProperty \)
 
-### $postGetter\( dataProperty \)
+### postGetter\( dataProperty \)
 
-### $preSetter\( dataProperty, value \)
+### preSetter\( dataProperty, value \)
 
-### $postSetter\( dataProperty, value \)
+### postSetter\( dataProperty, value \)
 
-### $preRenderView\( view, args \)
+### preRenderView\( view, args \)
 
-### $postRenderView\( view, args \)
+### postRenderView\( view, args \)
 
-### $preListener\( listener \)
+### preListener\( listener \)
 
-### $postListener\( listener \)
+### postListener\( listener \)
 
-### $preAction
+### preAction
 
-### $postAction
+### postAction
 
-### $preComputed
+### preComputed
 
-### $postComputed
+### postComputed
 

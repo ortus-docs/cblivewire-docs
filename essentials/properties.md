@@ -8,7 +8,7 @@ description: >-
 
 ## Initializing Properties
 
-You can define and initialize reactive properties on your cbwire components using `variables.$data`. 
+You can define and initialize reactive properties on your cbwire components using `variables.data`. 
 
 {% hint style="success" %}
 When data properties are mutated, the UI will update also.
@@ -18,7 +18,7 @@ When data properties are mutated, the UI will update also.
 // File: wires/BestMovies.cfc
 
 component extends="cbwire.models.Component"{
-    variables.$data = {
+    variables.data = {
         "topMovies": [
             "Back To The Future",
             "Karate Kid",
@@ -31,7 +31,7 @@ component extends="cbwire.models.Component"{
 
 ## Referencing Properties
 
-You can reference a property directly in your component using `variables.$data.[ property name ]`.
+You can reference a property directly in your component using `variables.data.[ property name ]`.
 
 ```javascript
 // File: wires/BestMovies.cfc
@@ -39,7 +39,7 @@ You can reference a property directly in your component using `variables.$data.[
 component extends="cbwire.models.Component"{
 
     // Data properties
-    variables.$data = {
+    variables.data = {
         "topMovies": [
             "Back To The Future",
             "Karate Kid",
@@ -49,7 +49,7 @@ component extends="cbwire.models.Component"{
     
     // Action called from UI
     function addAMovie(){
-        variables.$data.topMovies.append( "Ghostbusters" );
+        variables.data.topMovies.append( "Ghostbusters" );
     }
     ...
 }
