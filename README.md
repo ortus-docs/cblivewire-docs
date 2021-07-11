@@ -30,7 +30,7 @@ component extends="cbwire.models.Component" {
 
     // Our local data properties
     variables.data = {
-        // Hold's the search typed into the UI
+        // Hold's the search criteria typed into our UI
         "search": ""
     };
 
