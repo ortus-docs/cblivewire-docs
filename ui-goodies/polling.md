@@ -17,7 +17,7 @@ You can append a different interval time to your annotation as well.
 ```
 
 {% hint style="info" %}
-Polling for changes over AJAX is lightweight and is a good alternative to other strategies such as Pusher or WebSockets. 
+Polling for changes over AJAX is lightweight and is often a good alternative to strategies such as Pusher or WebSockets. 
 {% endhint %}
 
 ### Invoking Method
