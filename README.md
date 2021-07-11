@@ -6,7 +6,7 @@ description: >-
 
 # Introduction
 
-![](.gitbook/assets/logo%20%281%29.png)
+![](.gitbook/assets/cbwire300.png)
 
 ## cbwire - v1.0
 
