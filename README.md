@@ -29,16 +29,16 @@ component extends="cbwire.models.Component" {
         inject="MovieService@MyModule";
 
     // Our local data properties
-    variables.$data = {
+    variables.data = {
         // Hold's the search typed into the UI
         "search": ""
     };
 
     // Render our view
-    function $renderIt(){
-        return this.$renderView(
+    function renderIt(){
+        return this.renderView(
             "wires/searchMovies",
-            { "movies" : movieService.findBySearch( variables.$data.search ) }
+            { "movies" : movieService.findBySearch( variables.data.search ) }
         );
     }
 
