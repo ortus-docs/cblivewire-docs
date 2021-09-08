@@ -15,7 +15,7 @@ component extends="cbwire.models.Component"{
     * Fire an event when the user clicks a button.
     */
     function clickButton(){
-        this.emit( "IndianaJones", [ "And","The","Last","Crusade" );
+        this.emit( "IndianaJones", [ "And","The","Last","Crusade" ] );
     }
 
     function preEmit( string eventName, struct parameters ){
