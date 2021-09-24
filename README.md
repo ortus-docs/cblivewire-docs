@@ -93,9 +93,9 @@ Refresh the page, and you find a reactive Counter that increments when you hit t
 
 ![](.gitbook/assets/image.png)
 
-Let's reflect on what just happened.
+## How is this working!!!?
 
-1. cbwire renders our _Counter_ component with our `.cfm` page. You can View Source to see this. This means cbwire is SEO-friendly.
+1. cbwire renders our _Counter_ component with our `.cfm` page.  \( View Source to see this \). This means cbwire is SEO-friendly.
 2. When a user clicks the plus button, cbwire makes an AJAX request to the server and triggers the _increment_ action.
 3. cbwire updates the counter state
 4. cbwire re-renders the component template and returns the updated HTML in the AJAX response
@@ -106,7 +106,6 @@ Let's reflect on what just happened.
 * We didn't write any JavaScript.
 * We didn't have to worry about webpack configuration or compilation. 
 * We never left CFML.🤓 
-* We used baked-in [ColdBox](https://coldbox.org/) features, such as view rendering and dependency injection w/ [WireBox](https://wirebox.ortusbooks.com/).
 
 ## Fantastic, right?
 
