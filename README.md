@@ -16,29 +16,58 @@ What if you could create applications that look and feel just like your Vue or R
 
 Introducing **cbwire: Power-up your CFML!** 
 
-## A real-time movie search component built with cbwire in minutes...
+## Let's create a quick reactive counter in cbwire...
+
+Install [CommandBox](https://www.ortussolutions.com/products/commandbox), then from your terminal, run:
+
+```bash
+mkdir cbwire-demo
+cd cbwire-demo
+box create app .
+box install cbwire
+box server start
+```
+
+Let's add Livewire styling and script references to our layout, and also include a new cbwire component we will create called _Counter_.
+
+```markup
+<-- ./layouts/Main.cfm -->
+<cfoutput>
+<!doctype html>
+<html lang="en">
+<head>
+    #wireStyles()#
+</head>
+<body>
+    #wire( "Counter" )#
+    #wireScripts()#
+</body>
+</html>
+</cfoutput>
+
+```
+
+Let's create our _Counter_ cbwire component.
 
 ```javascript
-// File: ./wires/SearchMovies.cfc
+// File: ./wires/Counter.cfc
 
 component extends="cbwire.models.Component" {
 
-    // Wirebox injection ( wee! )
-    property
-        name="movieService"
-        inject="MovieService@MyModule";
-
-    // Our local data properties
+    // Reactive Data Properties
     variables.data = {
-        // Hold's the search criteria typed into our UI
-        "search": ""
+        "counter": "0"
     };
 
-    // Render our view
+    // Action to increment counter
+    function increment(){
+        variables.data.counter += 1;
+    }
+
+    // Tell cbwire where our Counter template is
     function renderIt(){
         return this.renderView(
-            "wires/searchMovies",
-            { "movies" : movieService.findBySearch( variables.data.search ) }
+            "wires/counter"
         );
     }
 
@@ -47,62 +76,41 @@ component extends="cbwire.models.Component" {
 ```
 
 ```markup
-// File: ./views/wires/searchMovies.cfm
-
+<!-- ./views/wires/counter.cfm -->
 <cfoutput>
 <div>
-    <input 
-        wire:model="search" 
-        type="text" 
-        placeholder="Search movies..."
-    />
-
-    <ul>
-        <cfloop array="#args.movies#" index="movie">
-            <li>#movie.getName()#</li>
-        </cfloop>
-    </ul>
+    <div>Count: #args.counter#</div>
+    <button wire:click="increment">
+        +
+    </button>
 </div>
 </cfoutput>
 ```
 
-Now that you've created your cbwire component and view, you can include this anywhere in your app using our `wire()` helper method.
+Now that you've created your cbwire _Counter_ component and template, you can include this in any layout or view throughout your app using our `wire()` helper method.
 
-```markup
-// File ./layouts/main.cfm
+Refresh the page, and you find a reactive Counter that increments when you hit the plus button.
 
-...
-<cfoutput>
-<body>
-    <!-- 
-        Renders our movie search form and updates
-        in real-time as user types
-    -->
-    #wire( "SearchMovies" )#
-</body>
-</cfoutput>
-...
-```
+![](.gitbook/assets/image.png)
 
 Let's reflect on what just happened.
 
-1. cbwire renders the initial component with our `.cfm` page, which means it's SEO- friendly.
-2. When a user types into the search, cbwire makes an AJAX request to the server with the updated state.
-3. The server re-renders the component and responds with the new HTML.
-4. cbwire utilizes the excellent [Livewire](https://laravel-livewire.com/) JavaScript library to mutate the DOM based on our state changes.
+1. cbwire renders our _Counter_ component with our `.cfm` page. You can View Source to see this. This means cbwire is SEO-friendly.
+2. When a user clicks the plus button, cbwire makes an AJAX request to the server and triggers the _increment_ action.
+3. cbwire updates the counter state
+4. cbwire re-renders the component template and returns the updated HTML in the AJAX response
+5. cbwire is using the amazing [Livewire](https://laravel-livewire.com/) JavaScript library to mutate the DOM based on our state changes.
 
-* We built a real-time search in a matter of just a few minutes.
+* We built a reactive counter.
+* We're not refreshing the page.
 * We didn't write any JavaScript.
 * We didn't have to worry about webpack configuration or compilation. 
-* We didn't create an API endpoint or worry about any of the complexities that an API introduces.
 * We never left CFML.🤓 
 * We used baked-in [ColdBox](https://coldbox.org/) features, such as view rendering and dependency injection w/ [WireBox](https://wirebox.ortusbooks.com/).
 
 ## Fantastic, right?
 
 We're just getting warmed up! cbwire has transformed the way we are building apps, and we think you're going to love it also. 
-
-Browse through the other sections of this documentation to see just how much cbwire can modernize your applications and improve your development experience. 
 
 ## Credits
 
