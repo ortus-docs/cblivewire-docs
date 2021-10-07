@@ -1,6 +1,6 @@
 # Loading States
 
-cbwire uses AJAX requests to invoke component actions on our wire objects. There are cases when this may involve a long-running process, such as completing a cart checkout, and the page may not respond instantly to a user event like a click. cbwire allows you to effortlessly display loading states, such as showing and hiding elements, adding and removing classes, or toggling HTML attributes until the server responds.
+cbwire via Livewire uses AJAX requests to invoke component actions on our wire objects. There are cases when this may involve a long-running process, such as completing a cart checkout, and the page may not respond instantly to a user event like a click. cbwire allows you to effortlessly display loading states, such as showing and hiding elements, adding and removing classes, or toggling HTML attributes until the server responds.
 
 Loading States can make your apps feel responsive and user-friendly.
 
@@ -10,7 +10,6 @@ Let's take a look at a checkout action that takes too long.
 
 ```javascript
 // File: ./wires/Cart.cfc
-
 component extends="cbwire.models.Component"{
 
     function checkout(){
@@ -25,9 +24,8 @@ component extends="cbwire.models.Component"{
 
 We can annotate our `<div>` with `wire:loading` to display _Processing Payment_ while the checkout action is running.
 
-```javascript
+```markup
 // File: ./views/wires/cart.cfm
-
 <div>
     <button wire:click="checkout">Checkout</button>
 
@@ -43,9 +41,8 @@ After the checkout action completes, the _Processing Payment_ output will disapp
 
 Sometimes your component actions complete at the speed of light, and the user doesn't have enough time to see the elements you want to be displayed. You can add a `.delay` modifier to delay showing your HTML elements for _200ms_.
 
-```javascript
+```markup
 // File: ./views/wires/cart.cfm
-
 <div wire:loading.delay>...</div>
 ```
 
@@ -53,9 +50,8 @@ Sometimes your component actions complete at the speed of light, and the user do
 
 Loading State elements are set with a CSS property of `display: inline-block;` by default. You can override this behavior by using various annotation modifiers.
 
-```javascript
+```markup
 // File: ./views/wires/cart.cfm
-
 <div wire:loading.flex>...</div>
 <div wire:loading.grid>...</div>
 <div wire:loading.inline>...</div>
@@ -66,9 +62,8 @@ Loading State elements are set with a CSS property of `display: inline-block;` b
 
 If you would like to display an element EXCEPT during a loading state, you can apply the `wire:loading.remove` annotation.
 
-```javascript
+```markup
 // File: ./views/wires/cart.cfm
-
 <div>
     <button wire:click="checkout">Checkout</button>
 
