@@ -15,15 +15,10 @@ When data properties are mutated, the UI will update also.
 {% endhint %}
 
 ```javascript
-// File: wires/BestMovies.cfc
-
+// File: wires/Counter.cfc
 component extends="cbwire.models.Component"{
     variables.data = {
-        "topMovies": [
-            "Back To The Future",
-            "Karate Kid",
-            "Ferris Bueller's Day Off"
-        ]
+        "counter": 0
     };
     ...
 }
@@ -34,22 +29,17 @@ component extends="cbwire.models.Component"{
 You can reference a property directly in your component using `variables.data.[ property name ]`.
 
 ```javascript
-// File: wires/BestMovies.cfc
-
+// File: wires/Counter.cfc
 component extends="cbwire.models.Component"{
 
     // Data properties
     variables.data = {
-        "topMovies": [
-            "Back To The Future",
-            "Karate Kid",
-            "Ferris Bueller's Day Off"
-        ]
+        "counter": 0
     };
     
     // Action called from UI
-    function addAMovie(){
-        variables.data.topMovies.append( "Ghostbusters" );
+    function increment(){
+        variables.data.counter += 1;
     }
     ...
 }
@@ -57,27 +47,22 @@ component extends="cbwire.models.Component"{
 
 You can also reference any defined properties from your cbwire component view using `args.[ property name  ]`.
 
-```javascript
-// File: views/wires/bestMovies.cfm
-
+```markup
+// File: views/wires/counter.cfm
 <cfoutput>
 <div>
-    <h1>Top Movies</h1>
-    <ul>
-        <cfloop array="#args.topMovies#" index="movie">
-            <li>#movie</li>
-        </cfloop>
-    </ul>
+    <h1>Counter</h1>
+    <div>Count: #args.counter#</div>
 </div>
 </cfoutput>
 ```
 
 ## Things To Know
 
-Your component's private `variables` scope will hold your data property definitions and current values, which is seemingly secure, but it's necessary to be cautious about what you store. cbwire communicates with the server via background AJAX requests and includes the current state of the data properties within those requests.
+Your component's private `variables` scope will hold your data property definitions and current values, which is seemingly secure, but it's necessary to be cautious about what you store. cbwire communicates with the server via Livewire using AJAX requests and includes the current state of the data properties within those requests.
 
 {% hint style="success" %}
-cbwire includes the current values of the data properties during requests to determine what state has changed and if cbwire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+cbwire includes the current values of the data properties during requests to determine what state has changed and if Livewire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 {% endhint %}
 
 {% hint style="danger" %}
