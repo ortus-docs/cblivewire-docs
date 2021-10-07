@@ -10,22 +10,21 @@ You can fire events from within views, components, or by using the global `cbwir
 
 ### From View
 
-```javascript
-<button
-    wire:click="$emit( 'movieAdded' )">
+```markup
+<button wire:click="$emit( 'counterIncremented' )">
 ```
 
 ### From Component
 
 ```javascript
-this.emit( "movieAdded" );
+this.emit( "counterIncremented" );
 ```
 
 ### From Javascript Global
 
-```javascript
+```markup
 <script>
-    cbwire.emit( 'movieAdded' )
+    cbwire.emit( 'counterIncremented' )
 </script>
 ```
 
@@ -37,11 +36,11 @@ You can register event listeners on a component by defining `variables.listeners
 component extends="cbwire.models.Component"{
 
 	variables.listeners = {
-		"movieAdded": "tellEveryone"
+		"counterIncremented": "tweetAboutIt"
 	};
 
-	function tellEveryone(){
-		// This is called when the movieAdded event is emitted.
+	function tweetAboutIt(){
+		// Blow up Twitter
 	}
 
 	...
@@ -49,40 +48,24 @@ component extends="cbwire.models.Component"{
 ```
 
 {% hint style="success" %}
-cbwire will invoke the `tellEveryone` method on the component if any other component on the same page emits a `movieAdded` event. 
+cbwire will invoke the `tweetAboutIt` method on the component if any other component on the same page emits a `counterIncremented` event. 
 {% endhint %}
 
 {% hint style="info" %}
 When defining your listeners, it is good to put your listener's names in quotation marks, as we have in our component above.   
   
-`"movieAdded": "tellEveryone"`
+`"counterIncremented": "tweetAboutIt"`
 
-JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `POSTADDED`. 🙃 
+JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `TWEETABOUTIT`. 🙃 
 {% endhint %}
-
-## Dynamic Event Listeners
-
-If you need to name your event listeners dynamically, you can override the `getListeners()` method on your cbwire component.
-
-```javascript
-component extends="cbwire.models.Component"{
-
-    function getListeners(){
-        return {
-		 	      "movieAdded": "tellEvery#0 + 1#" // tellEvery1
-		    }
-	  }
-	...
-}
-```
 
 ## Event Listeners In JavaScript
 
-```javascript
+```markup
 // File: ./views/wires/myView.cfm
 <script>
-    cbwire.on( 'movieAdded', movieId => {
-        alert( 'A movie was added with the id of: ' + movieId );
+    cbwire.on( 'counterIncremented', counter => {
+        alert( 'The counter was incremented with a value of: ' + counter );
     })
 </script>
 ```
