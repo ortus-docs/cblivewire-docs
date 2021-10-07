@@ -10,7 +10,6 @@ That's it. Thank you[ Brad Wood ](https://twitter.com/bdw429s?lang=en)!!🙂
 
 ## Requirements
 
-* Adobe ColdFusion 2018+
-* Lucee 5+
+* Adobe ColdFusion 2018+ or Lucee 5+
 * ColdBox 6+
 
