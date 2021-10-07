@@ -1,12 +1,18 @@
 # Installation
 
-Install [CommandBox](https://www.ortussolutions.com/products/commandbox), then from your terminal, run:
+Install [CommandBox](https://www.ortussolutions.com/products/commandbox), then from your terminal, within the root of your project, run:
 
-```text
+```bash
 box install cbwire
 ```
 
-That's it. Thank you[ Brad Wood ](https://twitter.com/bdw429s?lang=en)!!🙂 
+If you want the latest \( bleeding edge \), run:
+
+```bash
+box install cbwire@be
+```
+
+That's it. Thank you[ Brad](https://twitter.com/bdw429s?lang=en)!🙂 
 
 ## Requirements
 
