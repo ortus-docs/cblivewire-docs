@@ -24,7 +24,7 @@ this.emit( "counterIncremented" );
 
 ```markup
 <script>
-    cbwire.emit( 'counterIncremented' )
+    cbwire.emit( 'counterIncremented' );
 </script>
 ```
 
