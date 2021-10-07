@@ -8,8 +8,6 @@ description: >-
 
 ![](.gitbook/assets/cbwire300.png)
 
-## cbwire - v1.0
-
 Building modern CFML apps has become a bit complicated. [ColdBox](https://coldbox.ortusbooks.com/) makes server-side programming a cinch, but what about our front-end development? Front-end frameworks such as Vue and React have transformed our apps and are undoubtedly powerful. Still, they’ve also introduced some complexity and added a significant learning curve when creating web applications.
 
 What if you could create applications that look and feel just like your Vue or React web apps but written primarily with CFML. Impossible, you say? Nay, we say!

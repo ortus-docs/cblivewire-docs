@@ -18,14 +18,14 @@
 
 * [Redirecting](component-features/redirecting.md)
 
-## UI Goodies
+## Templates
 
-* [Loading States](ui-goodies/loading-states.md)
-* [Polling](ui-goodies/polling.md)
-* [Prefetching](ui-goodies/prefetching.md)
-* [Offline State](ui-goodies/offline-state.md)
-* [Dirty States](ui-goodies/dirty-states.md)
-* [Defer Loading](ui-goodies/defer-loading.md)
+* [Loading States](templates/loading-states.md)
+* [Polling](templates/polling.md)
+* [Prefetching](templates/prefetching.md)
+* [Offline State](templates/offline-state.md)
+* [Dirty States](templates/dirty-states.md)
+* [Defer Loading](templates/defer-loading.md)
 
 ## JS Integrations
 
