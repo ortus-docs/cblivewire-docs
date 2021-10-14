@@ -4,29 +4,29 @@ You can scaffold cbwire components quickly using the [commandbox-cbwire](https:/
 
 ## Installing commandbox-cbwire
 
-To get started open the [CommandBox ](https://commandbox.ortusbooks.com/)binary or enter the shell by typing `box` in your terminal or console. Then let's install our scaffolding module.
+To get started open the [CommandBox ](https://commandbox.ortusbooks.com)binary or enter the shell by typing `box` in your terminal or console. Then let's install our scaffolding module.
 
-```text
+```
 install commandbox-cbwire
 ```
 
 ## Creating Components
 
-Let's create a MovieList cbwire component that we will use to list our favorite movies.
+Let's create a **Counter** cbwire component that we will use to list our favorite movies.
 
 ```javascript
-cbwire create MovieList
-// Created /wires/MovieList.cfc
-// Created /views/wires/movielist.cfm
-// Created /tests/specs/integration/wires/MovieListTest.cfc
+cbwire create Counter
+// Created /wires/Counter.cfc
+// Created /views/wires/counter.cfm
+// Created /tests/specs/integration/wires/CounterTest.cfc
 ```
 
 You can provide named arguments as well.
 
 ```javascript
-cbwire create name=MovieList views=false
-// Created /wires/MovieList.cfc
-// Created /tests/specs/integration/wires/MovieListTest.cfc
+cbwire create name=Counter views=false
+// Created /wires/Counter.cfc
+// Created /tests/specs/integration/wires/CounterTest.cfc
 ```
 
 Below is the entire signature of arguments you can provide to the `create` command.
@@ -55,4 +55,3 @@ Below is the entire signature of arguments you can provide to the `create` comma
     boolean open = false
 )
 ```
-
