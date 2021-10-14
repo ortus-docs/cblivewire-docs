@@ -18,7 +18,7 @@ component extends="cbwire.model.Component"{
 }
 ```
 
-```html
+```javascript
 <div>
     <button wire:click="increment">Increment Counter</button>
 </div>

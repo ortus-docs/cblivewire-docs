@@ -47,7 +47,7 @@ component extends="cbwire.models.Component"{
 
 You can also reference any defined properties from your cbwire component view using `args.[ property name  ]`.
 
-```markup
+```javascript
 // File: views/wires/counter.cfm
 <cfoutput>
 <div>
@@ -66,12 +66,10 @@ cbwire includes the current values of the data properties during requests to det
 {% endhint %}
 
 {% hint style="danger" %}
-You should NEVER store sensitive data \( such as passwords, SSNs \) that you wouldn't want your application's users to see.
+You should NEVER store sensitive data ( such as passwords, SSNs ) that you wouldn't want your application's users to see.
 {% endhint %}
 
 {% hint style="info" %}
 Data properties can only be data types that are castable to JavaScript data types, such as CFML strings, numeric, arrays, structs, or booleans.
 {% endhint %}
-
-
 

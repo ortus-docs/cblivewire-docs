@@ -22,7 +22,7 @@ this.emit( "counterIncremented" );
 
 ### From Javascript Global
 
-```markup
+```javascript
 <script>
     cbwire.emit( 'counterIncremented' );
 </script>
@@ -52,16 +52,16 @@ cbwire will invoke the `tweetAboutIt` method on the component if any other compo
 {% endhint %}
 
 {% hint style="info" %}
-When defining your listeners, it is good to put your listener's names in quotation marks, as we have in our component above.   
-  
+When defining your listeners, it is good to put your listener's names in quotation marks, as we have in our component above. \
+\
 `"counterIncremented": "tweetAboutIt"`
 
-JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `TWEETABOUTIT`. 🙃 
+JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `TWEETABOUTIT`. :upside_down: 
 {% endhint %}
 
 ## Event Listeners In JavaScript
 
-```markup
+```javascript
 // File: ./views/wires/myView.cfm
 <script>
     cbwire.on( 'counterIncremented', counter => {
@@ -69,4 +69,3 @@ JavaScript keys are case-sensitive. You can preserve the key casing in CFML by s
     })
 </script>
 ```
-

@@ -24,7 +24,7 @@ component extends="cbwire.models.Component"{
 
 We can annotate our `<div>` with `wire:loading` to display _Processing Payment_ while the checkout action is running.
 
-```markup
+```javascript
 // File: ./views/wires/cart.cfm
 <div>
     <button wire:click="checkout">Checkout</button>
@@ -35,13 +35,13 @@ We can annotate our `<div>` with `wire:loading` to display _Processing Payment_ 
 </div>
 ```
 
-After the checkout action completes, the _Processing Payment_ output will disappear. 👋 
+After the checkout action completes, the _Processing Payment_ output will disappear. :wave: 
 
 ## Delay Loading State
 
 Sometimes your component actions complete at the speed of light, and the user doesn't have enough time to see the elements you want to be displayed. You can add a `.delay` modifier to delay showing your HTML elements for _200ms_.
 
-```markup
+```javascript
 // File: ./views/wires/cart.cfm
 <div wire:loading.delay>...</div>
 ```
@@ -50,7 +50,7 @@ Sometimes your component actions complete at the speed of light, and the user do
 
 Loading State elements are set with a CSS property of `display: inline-block;` by default. You can override this behavior by using various annotation modifiers.
 
-```markup
+```javascript
 // File: ./views/wires/cart.cfm
 <div wire:loading.flex>...</div>
 <div wire:loading.grid>...</div>
@@ -62,7 +62,7 @@ Loading State elements are set with a CSS property of `display: inline-block;` b
 
 If you would like to display an element EXCEPT during a loading state, you can apply the `wire:loading.remove` annotation.
 
-```markup
+```javascript
 // File: ./views/wires/cart.cfm
 <div>
     <button wire:click="checkout">Checkout</button>
@@ -72,4 +72,3 @@ If you would like to display an element EXCEPT during a loading state, you can a
     </div>
 </div>
 ```
-

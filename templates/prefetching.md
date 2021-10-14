@@ -2,7 +2,7 @@
 
 You can prefetch an action's results on mouseOver using the `.prefetch` modifier. 
 
-```markup
+```javascript
 // File: ./views/wires/movie.cfm
 <div>
     <button wire:click.prefetch="togglePreview">Show Preview</button>
@@ -32,10 +32,9 @@ component extends="cbwire.models.Component"{
 ```
 
 {% hint style="success" %}
-In the example here, cbwire will invoke \( prefetch \) the `togglePreview` action when the user mouses over the button. The results of the fetch are not displayed until the user clicks the 'Show Preview' button.
+In the example here, cbwire will invoke ( prefetch ) the `togglePreview` action when the user mouses over the button. The results of the fetch are not displayed until the user clicks the 'Show Preview' button.
 {% endhint %}
 
 {% hint style="warning" %}
 Prefetching works well for actions that do not perform any side effects, such as mutating session data or writing to a database. If the action you are "pre-fetching" does have side effects, you may encounter unpredictable results.
 {% endhint %}
-
