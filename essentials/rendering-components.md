@@ -9,18 +9,16 @@ Be sure that cbwire can bind onto your component's view by including an outer el
 {% endhint %}
 
 ```javascript
-// File: ./views/wires/rentMovie.cfm
-
+// File: ./views/wires/counter.cfm
 <!--- GOOD --->
 <cfoutput>
     <div>
-        <button wire:click="rentMovie">Rent Movie</button>
+        <button wire:click="increment">Increment Counter</button>
     </div>
 </cfoutput>
 
 <!--- BAD --->
 <cfoutput>
-    <button wire:click="rentMovie">Rent Movie</button>
+    <button wire:click="increment">Does Not Work</button>
 </cfoutput>
 ```
-
