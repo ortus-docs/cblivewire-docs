@@ -1,18 +1,18 @@
 ---
 description: >-
-  cbwire is a ColdBox module that makes building reactive, dynamic, and modern
-  interfaces delightfully easy without leaving the comfort of CFML.
+  cbwire is a ColdBox module that makes building reactive, modern apps easy
+  without leaving the comfort of CFML.
 ---
 
 # Introduction
 
 ![](.gitbook/assets/cbwire300.png)
 
-Building modern CFML apps has become a bit complicated. [ColdBox](https://coldbox.ortusbooks.com/) makes server-side programming a cinch, but what about our front-end development? Front-end frameworks such as Vue and React have transformed our apps and are undoubtedly powerful. Still, they’ve also introduced some complexity and added a significant learning curve when creating web applications.
+Building modern CFML apps is complicated. [ColdBox](https://coldbox.ortusbooks.com) makes creating server-side apps easy, but what about the client-side? Front-end JavaScript frameworks like Vue and React are powerful, yet they also introduced complexity and a significant learning curve when creating web apps.
 
-What if you could create applications that look and feel just like your Vue or React web apps but written primarily with CFML. Impossible, you say? Nay, we say!
+What if you could create apps that look and feel like your Vue and React web apps but are written with CFML. Impossible, you say? Nay, we say!
 
-Introducing **cbwire: Power-up your CFML!** 
+Introducing **cbwire: Power-up your CFML! **
 
 ## Let's create a quick reactive counter in cbwire...
 
@@ -93,29 +93,28 @@ Refresh the page, and you find a reactive Counter that increments when you hit t
 
 ## How is this working!!!?
 
-1. cbwire renders our _Counter_ component with our `.cfm` page.  \( View Source to see this \). This means cbwire is SEO-friendly.
+1. cbwire renders our _Counter_ component with our `.cfm `page.  ( View Source to see this ). This means cbwire is SEO-friendly.
 2. When a user clicks the plus button, cbwire makes an AJAX request to the server and triggers the _increment_ action.
 3. cbwire updates the counter state
 4. cbwire re-renders the component template and returns the updated HTML in the AJAX response
-5. cbwire is using the amazing [Livewire](https://laravel-livewire.com/) JavaScript library to mutate the DOM based on our state changes.
+5. cbwire is using the amazing [Livewire](https://laravel-livewire.com) JavaScript library to mutate the DOM based on our state changes.
 
 * We built a reactive counter.
 * We're not refreshing the page.
 * We didn't write any JavaScript.
-* We didn't have to worry about webpack configuration or compilation. 
-* We never left CFML.🤓 
+* We didn't have to worry about webpack configuration or compilation.&#x20;
+* We never left CFML.:nerd:&#x20;
 
 ## Fantastic, right?
 
-We're just getting warmed up! cbwire has transformed the way we are building apps, and we think you're going to love it also. 
+We're just getting warmed up! cbwire has transformed the way we are building apps, and we think you're going to love it also.&#x20;
 
 ## Credits
 
-cbwire wouldn't even exist if it wasn't for the impressive efforts of Caleb Porzio \( creator of [Livewire](https://laravel-livewire.com/), also [Alpine.js](https://github.com/alpinejs/alpine) \) and the PHP Laravel community. Caleb created Livewire for use with the PHP framework Laravel. cbwire is a port of the Livewire functionality to ColdBox and CFML, with some additional goodies sprinkled in.
+cbwire wouldn't even exist if it wasn't for the impressive efforts of Caleb Porzio ( creator of [Livewire](https://laravel-livewire.com), also [Alpine.js](https://github.com/alpinejs/alpine) ) and the PHP Laravel community. Caleb created Livewire for use with the PHP framework Laravel. cbwire is a port of the Livewire functionality to ColdBox and CFML, with some additional goodies sprinkled in.
 
-The cbwire module for ColdBox is written and maintained by [Grant Copley](https://twitter.com/grantcopley), [Luis Majano](https://twitter.com/lmajano), and [Ortus Solutions](https://www.ortussolutions.com/).
+The cbwire module for ColdBox is written and maintained by [Grant Copley](https://twitter.com/grantcopley), [Luis Majano](https://twitter.com/lmajano), and [Ortus Solutions](https://www.ortussolutions.com).
 
 ## Project Support
 
-If cbwire makes you😍, please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
-
+If cbwire makes you:heart\_eyes:, please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
