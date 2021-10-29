@@ -8,13 +8,13 @@ description: >-
 
 ![](.gitbook/assets/cbwire300.png)
 
-Building modern CFML apps is complicated. [ColdBox](https://coldbox.ortusbooks.com) makes creating server-side apps easy, but what about the client-side? Front-end JavaScript frameworks like Vue and React are powerful, yet they also introduced complexity and a significant learning curve when creating web apps.
+Building modern CFML apps is complicated. [ColdBox](https://coldbox.ortusbooks.com) makes creating server-side apps easy, but what about the client-side? Front-end JavaScript frameworks like Vue and React are powerful, yet they also introduce complexity and a significant learning curve when creating our apps.
 
 What if you could create apps that look and feel like your Vue and React web apps but are written with CFML. Impossible, you say? Nay, we say!
 
 Introducing **cbwire: Power-up your CFML! **
 
-## Let's create a quick reactive counter in cbwire...
+## Let's create a Counter in cbwire...
 
 Install [CommandBox](https://www.ortussolutions.com/products/commandbox), then from your terminal, run:
 
@@ -26,7 +26,7 @@ box install cbwire
 box server start
 ```
 
-Let's add Livewire styling and script references to our layout, and also include a new cbwire component we will create called _Counter_.
+Let's add cbwire styling and script references to our layout using `wireStyles()` and `wireScripts()`, and include a cbwire component we will create using `wire( "Counter ")`.
 
 ```markup
 <-- ./layouts/Main.cfm -->
@@ -85,7 +85,7 @@ component extends="cbwire.models.Component" {
 </cfoutput>
 ```
 
-Now that you've created your cbwire _Counter_ component and template, you can include this in any layout or view throughout your app using our `wire()` helper method.
+Now that you've created your _Counter_ component, you can include this component in any layout or view throughout your app using the `wire()` helper method.
 
 Refresh the page, and you find a reactive Counter that increments when you hit the plus button.
 
