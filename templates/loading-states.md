@@ -24,7 +24,7 @@ component extends="cbwire.models.Component"{
 
 We can annotate our `<div>` with `wire:loading` to display _Processing Payment_ while the checkout action is running.
 
-```javascript
+```xml
 // File: ./views/wires/cart.cfm
 <div>
     <button wire:click="checkout">Checkout</button>
@@ -35,7 +35,17 @@ We can annotate our `<div>` with `wire:loading` to display _Processing Payment_ 
 </div>
 ```
 
-After the checkout action completes, the _Processing Payment_ output will disappear. :wave: 
+After the checkout action completes, the _Processing Payment_ output will disappear. :wave:&#x20;
+
+## Toggling Attributes
+
+```xml
+<div>
+    <button wire:click="checkout" wire:loading.attr="disabled">
+        Checkout
+    </button>
+</div>
+```
 
 ## Delay Loading State
 
@@ -46,7 +56,7 @@ Sometimes your component actions complete at the speed of light, and the user do
 <div wire:loading.delay>...</div>
 ```
 
-##  Display Property
+## &#x20;Display Property
 
 Loading State elements are set with a CSS property of `display: inline-block;` by default. You can override this behavior by using various annotation modifiers.
 
