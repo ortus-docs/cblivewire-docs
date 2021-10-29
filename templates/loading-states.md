@@ -51,7 +51,7 @@ After the checkout action completes, the _Processing Payment_ output will disapp
 
 Sometimes your component actions complete at the speed of light, and the user doesn't have enough time to see the elements you want to be displayed. You can add a `.delay` modifier to delay showing your HTML elements for _200ms_.
 
-```javascript
+```xml
 // File: ./views/wires/cart.cfm
 <div wire:loading.delay>...</div>
 ```
@@ -60,7 +60,7 @@ Sometimes your component actions complete at the speed of light, and the user do
 
 Loading State elements are set with a CSS property of `display: inline-block;` by default. You can override this behavior by using various annotation modifiers.
 
-```javascript
+```xml
 // File: ./views/wires/cart.cfm
 <div wire:loading.flex>...</div>
 <div wire:loading.grid>...</div>
@@ -72,7 +72,7 @@ Loading State elements are set with a CSS property of `display: inline-block;` b
 
 If you would like to display an element EXCEPT during a loading state, you can apply the `wire:loading.remove` annotation.
 
-```javascript
+```xml
 // File: ./views/wires/cart.cfm
 <div>
     <button wire:click="checkout">Checkout</button>
