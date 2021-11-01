@@ -11,7 +11,7 @@
 * [Data Properties](essentials/properties.md)
 * [Actions](essentials/actions.md)
 * [Events](essentials/events.md)
-* [Lifecycle Hooks](essentials/lifecycle-hooks.md)
+* [Lifecycle Events](essentials/lifecycle-hooks.md)
 * [Nesting Components](essentials/nesting-components.md)
 
 ## Component Features
@@ -32,10 +32,9 @@
 * [AlpineJS](js-integrations/alpinejs.md)
 * [Inline Scripts](js-integrations/inline-scripts.md)
 
----
+***
 
 * [Testing](testing.md)
 * [Security](security.md)
 * [Troubleshooting](troubleshooting.md)
 * [CommandBox Commands](commandbox-commands.md)
-

@@ -6,16 +6,15 @@ Install [CommandBox](https://www.ortussolutions.com/products/commandbox), then f
 box install cbwire
 ```
 
-If you want the latest \( bleeding edge \), run:
+If you want the latest ( bleeding edge ), run:
 
 ```bash
 box install cbwire@be
 ```
 
-That's it. Thank you[ Brad](https://twitter.com/bdw429s?lang=en)!🙂 
+That's it. Thank you[ Brad](https://twitter.com/bdw429s?lang=en)!:slight\_smile:&#x20;
 
 ## Requirements
 
 * Adobe ColdFusion 2018+ or Lucee 5+
 * ColdBox 6+
-

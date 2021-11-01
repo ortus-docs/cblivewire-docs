@@ -1,84 +1,21 @@
-# Lifecycle Hooks
+# Lifecycle Events
 
-###  this.preEmit\( string eventName, struct parameters \)
+## Initial Component Rendering
 
-### this.postEmit\( string eventName, struct parameters \)
+![](<../.gitbook/assets/image (2).png>)
 
-Executes before and after **the current** cbwire component emits **any** event.
+## mount( parameters, event, rc, prc )
+
+Runs once immediately after a component is instantiated before `renderIt()` is called.
 
 ```javascript
-// File: ./wires/MovieList.cfc
+component extends="cbwire.models.Component" {
 
-component extends="cbwire.models.Component"{
-
-    /**
-    * Fire an event when the user clicks a button.
-    */
-    function clickButton(){
-        this.emit( "IndianaJones", [ "And","The","Last","Crusade" ] );
+    function mount( parameters, event, rc, prc ){
+        variables.data.incomingValue = event.getValue( "someField" );
     }
-
-    function preEmit( string eventName, struct parameters ){
-        // Fires before we emit "IndianaJones"         
-    }
-    
-    function postEmit( string eventName, struct parameters ){
-        // Fires after we emit "IndianaJones"         
-    }
-
-    function renderIt(){
-        return this.renderView( "wires/movieList" );
-    }
-    
 
 }
 ```
 
-{% hint style="info" %}
-The `preEmit` and `postEmit` lifecycle hooks are executed when events are emitted **within the same component**, not when events are emitted from other components.
-{% endhint %}
-
-You can also target specific emits by appending the event to your function name, such as `preEmitIndianaJones` and `postEmitIndianaJones`.
-
-```javascript
-// File: ./wires/MovieList.cfc
-
-component extends="cbwire.models.Component"{
-    ...
-    function preEmitIndianaJones( struct parameters ){}
-    
-    function postEmitIndianaJones( struct parameters ){}
-    ...
-}
-```
-
-##  
-
-### preHyrdrate\( wireRequest \) 
-
-### postHydrate \( wireRequest \)
-
-### preGetter\( dataProperty \)
-
-### postGetter\( dataProperty \)
-
-### preSetter\( dataProperty, value \)
-
-### postSetter\( dataProperty, value \)
-
-### preRenderView\( view, args \)
-
-### postRenderView\( view, args \)
-
-### preListener\( listener \)
-
-### postListener\( listener \)
-
-### preAction
-
-### postAction
-
-### preComputed
-
-### postComputed
-
+## &#x20;
