@@ -4,14 +4,14 @@
 
 ![](<../.gitbook/assets/image (3).png>)
 
-## mount( parameters, event, rc, prc )
+## mount( event, rc, prc, parameters )
 
-Runs once immediately after a component is instantiated before `renderIt()` is called.
+Runs **once** when the component is initially wired.
 
 ```javascript
 component extends="cbwire.models.Component" {
 
-    function mount( parameters, event, rc, prc ){
+    function mount( event, rc, prc, parameters ){
         variables.data.incomingValue = event.getValue( "someField" );
     }
 
