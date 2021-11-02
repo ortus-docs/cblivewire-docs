@@ -22,7 +22,7 @@ this.emit( "counterIncremented" );
 
 ### From Javascript Global
 
-```javascript
+```xml
 <script>
     cbwire.emit( 'counterIncremented' );
 </script>
@@ -48,7 +48,7 @@ component extends="cbwire.models.Component"{
 ```
 
 {% hint style="success" %}
-cbwire will invoke the `tweetAboutIt` method on the component if any other component on the same page emits a `counterIncremented` event. 
+cbwire will invoke the `tweetAboutIt` method on the component if any other component on the same page emits a `counterIncremented` event.&#x20;
 {% endhint %}
 
 {% hint style="info" %}
@@ -56,7 +56,7 @@ When defining your listeners, it is good to put your listener's names in quotati
 \
 `"counterIncremented": "tweetAboutIt"`
 
-JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `TWEETABOUTIT`. :upside_down: 
+JavaScript keys are case-sensitive. You can preserve the key casing in CFML by surrounding your listener names in quotations. Without the quotations, CFML will convert the key to all uppercase, such as `TWEETABOUTIT`. :upside\_down:&#x20;
 {% endhint %}
 
 ## Event Listeners In JavaScript

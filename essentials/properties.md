@@ -8,7 +8,7 @@ description: >-
 
 ## Initializing Properties
 
-You can define and initialize reactive properties on your cbwire components using `variables.data`. 
+You can define and initialize reactive properties on your cbwire components using `variables.data`.&#x20;
 
 {% hint style="success" %}
 When data properties are mutated, the UI will update also.
@@ -47,7 +47,7 @@ component extends="cbwire.models.Component"{
 
 You can also reference any defined properties from your cbwire component view using `args.[ property name  ]`.
 
-```javascript
+```xml
 // File: views/wires/counter.cfm
 <cfoutput>
 <div>
@@ -62,7 +62,7 @@ You can also reference any defined properties from your cbwire component view us
 Your component's private `variables` scope will hold your data property definitions and current values, which is seemingly secure, but it's necessary to be cautious about what you store. cbwire communicates with the server via Livewire using AJAX requests and includes the current state of the data properties within those requests.
 
 {% hint style="success" %}
-cbwire includes the current values of the data properties during requests to determine what state has changed and if Livewire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+cbwire includes the current values of the data properties during requests to determine what state has changed and if Livewire should update the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document\_Object\_Model/Introduction).
 {% endhint %}
 
 {% hint style="danger" %}

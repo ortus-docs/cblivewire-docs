@@ -12,7 +12,6 @@
 * [Actions](essentials/actions.md)
 * [Events](essentials/events.md)
 * [Lifecycle Events](essentials/lifecycle-hooks.md)
-* [Nesting Components](essentials/nesting-components.md)
 
 ## Component Features
 

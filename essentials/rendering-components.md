@@ -8,7 +8,7 @@ You must have a public`$renderIt()`method defined on your CFML component. Otherw
 Be sure that cbwire can bind onto your component's view by including an outer element such as`<div>`. If an outer element is not detected, cbwire will throw a `OuterElementNotFound`exception.
 {% endhint %}
 
-```javascript
+```xml
 // File: ./views/wires/counter.cfm
 <!--- GOOD --->
 <cfoutput>
