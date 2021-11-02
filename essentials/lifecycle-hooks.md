@@ -2,7 +2,7 @@
 
 ## Component Wiring
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (1).png>)
 
 ## mount( event, rc, prc, parameters )
 
