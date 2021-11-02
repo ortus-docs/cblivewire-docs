@@ -11,7 +11,7 @@
 * [Data Properties](essentials/properties.md)
 * [Actions](essentials/actions.md)
 * [Events](essentials/events.md)
-* [Lifecycle Events](essentials/lifecycle-hooks.md)
+* [Lifecycle Events](essentials/lifecycle-events.md)
 
 ## Component Features
 
