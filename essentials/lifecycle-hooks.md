@@ -2,7 +2,7 @@
 
 ## Initial Component Rendering
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (1).png>)
 
 ## mount( parameters, event, rc, prc )
 
