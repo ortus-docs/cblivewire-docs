@@ -17,6 +17,7 @@
 ## Component Features
 
 * [Redirecting](component-features/redirecting.md)
+* [Logging](component-features/logging.md)
 
 ## Templates
 
