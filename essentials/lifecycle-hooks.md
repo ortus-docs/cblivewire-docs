@@ -1,8 +1,8 @@
 # Lifecycle Events
 
-## Initial Component Rendering
+## Component Wiring
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 ## mount( parameters, event, rc, prc )
 
