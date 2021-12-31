@@ -1,22 +1,19 @@
 # Configuration
 
-Just as with other [Coldbox Modules](https://www.forgebox.io/), you can alter cbwire's behavior by overriding settings in your `config/ColdBox.cfc` file.
+You can alter cbwire's behavior by overriding settings in your `config/ColdBox.cfc` file.
 
 ```javascript
 // File: ./config/ColdBox.cfc
 
 component{
-    ...
     function configure() {
         moduleSettings = {
             cbwire = {
                 "throwOnMissingSetterMethod" : false,
                 "componentLocation": "wires"
-                ...
             }
         };
      }
-     ...
 }
 
 ```
@@ -32,4 +29,3 @@ Set as `true` to throw a `WireSetterNotFound` exception if the incoming wire req
 ## componentLocation
 
 The relative folder path where the cbwire components are stored. **Defaults to `wires`**.
-
