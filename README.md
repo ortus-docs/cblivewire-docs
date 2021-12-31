@@ -52,9 +52,6 @@ Let's create our _Counter_ cbwire component.
 
 component extends="cbwire.models.Component" {
 
-    // Define where our component view is located.
-    variables.view = "wires/counter";
-
     // Reactive Data Properties
     variables.data = {
         "counter": "0"
