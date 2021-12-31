@@ -1,8 +1,8 @@
 # Prefetching
 
-You can prefetch an action's results on mouseOver using the `.prefetch` modifier. 
+You can prefetch an action's results on mouseOver using the `.prefetch` modifier.&#x20;
 
-```javascript
+```xml
 // File: ./views/wires/movie.cfm
 <div>
     <button wire:click.prefetch="togglePreview">Show Preview</button>
