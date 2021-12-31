@@ -12,7 +12,7 @@ Building modern CFML apps is complicated. [ColdBox](https://coldbox.ortusbooks.c
 
 What if you could create apps that look and feel like your Vue and React web apps but are written with CFML. Impossible, you say? Nay, we say!
 
-Introducing **cbwire: Power-up your CFML! **
+Introducing **cbwire: Power-up your CFML!**&#x20;
 
 ## Let's create a Counter in cbwire...
 
@@ -52,6 +52,9 @@ Let's create our _Counter_ cbwire component.
 
 component extends="cbwire.models.Component" {
 
+    // Define where our component view is located.
+    variables.view = "wires/counter";
+
     // Reactive Data Properties
     variables.data = {
         "counter": "0"
@@ -61,14 +64,6 @@ component extends="cbwire.models.Component" {
     function increment(){
         variables.data.counter += 1;
     }
-
-    // Tell cbwire where our Counter template is
-    function renderIt(){
-        return this.renderView(
-            "wires/counter"
-        );
-    }
-
 }
 
 ```
@@ -85,36 +80,36 @@ component extends="cbwire.models.Component" {
 </cfoutput>
 ```
 
-Now that you've created your _Counter_ component, you can include this component in any layout or view throughout your app using the `wire()` helper method.
+Now that you've created your _Counter_ component, you can include this component in any layout or view throughout your ColdBox app using the `wire()` helper method.
 
-Refresh the page, and you find a reactive Counter that increments when you hit the plus button.
+Refresh the page and you find a reactive counter that increments when you hit the plus button.
 
 ![](.gitbook/assets/image.png)
 
 ## How is this working!!!?
 
-1. cbwire renders our _Counter_ component with our `.cfm `page.  ( View Source to see this ). This means cbwire is SEO-friendly.
+1. cbwire renders our _Counter_ component with our `.cfm` page.  ( View Source to see this ). This means cbwire is SEO-friendly.
 2. When a user clicks the plus button, cbwire makes an AJAX request to the server and triggers the _increment_ action.
 3. cbwire updates the counter state
 4. cbwire re-renders the component template and returns the updated HTML in the AJAX response
 5. cbwire is using the amazing [Livewire](https://laravel-livewire.com) JavaScript library to mutate the DOM based on our state changes.
 
+## Pretty cool, right?
+
 * We built a reactive counter.
-* We're not refreshing the page.
+* The counter updates without any page refresh.
 * We didn't write any JavaScript.
-* We didn't have to worry about webpack configuration or compilation.&#x20;
+* We didn't mess with webpack or JavaScript compilation.&#x20;
 * We never left CFML.:nerd:&#x20;
 
-## Fantastic, right?
-
-We're just getting warmed up! cbwire has transformed the way we are building apps, and we think you're going to love it also.&#x20;
+We're just getting warmed up! cbwire is transforming the way we build CFML applications, and we think you're going to love it also.&#x20;
 
 ## Credits
 
-cbwire wouldn't even exist if it wasn't for the impressive efforts of Caleb Porzio ( creator of [Livewire](https://laravel-livewire.com), also [Alpine.js](https://github.com/alpinejs/alpine) ) and the PHP Laravel community. Caleb created Livewire for use with the PHP framework Laravel. cbwire is a port of the Livewire functionality to ColdBox and CFML, with some additional goodies sprinkled in.
+cbwire is built on [Livewire](https://laravel-livewire.com) and wouldn't exist if it wasn't for the efforts of Caleb Porzio ( creator of [Livewire](https://laravel-livewire.com), [Alpine.js](https://github.com/alpinejs/alpine) ) and the PHP community.&#x20;
 
 The cbwire module for ColdBox is written and maintained by [Grant Copley](https://twitter.com/grantcopley), [Luis Majano](https://twitter.com/lmajano), and [Ortus Solutions](https://www.ortussolutions.com).
 
 ## Project Support
 
-If cbwire makes you:heart\_eyes:, please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
+Please consider becoming one of our lovingly esteemed [Patreon supporters](https://www.patreon.com/ortussolutions).
