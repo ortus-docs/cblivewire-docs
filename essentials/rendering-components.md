@@ -43,10 +43,6 @@ For the `Counter.cfc` example above, cbwire will attempt to render a view locate
 File names should be lowercase when using Implicit Lookups. This is to avoid issues on case-sensitive file systems.
 {% endhint %}
 
-{% hint style="info" %}
-If cbwire cannot determine how to render your component's view, a `RenderMethodNotFound` exception is thrown.
-{% endhint %}
-
 ### View Example
 
 ```xml
