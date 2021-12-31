@@ -7,7 +7,7 @@
 * [Installation](essentials/installation.md)
 * [Configuration](essentials/configuration.md)
 * [Creating Components](essentials/creating-components.md)
-* [Rendering Components](essentials/rendering-components.md)
+* [Rendering Views](essentials/rendering-components.md)
 * [Data Properties](essentials/properties.md)
 * [Actions](essentials/actions.md)
 * [Events](essentials/events.md)
