@@ -2,7 +2,7 @@
 
 ### renderIt()&#x20;
 
-You can specify your component's template by defining a `renderIt()` method on your component.
+You can set your component's template by defining a `renderIt()` method on your component.
 
 ```javascript
 component extends="cbwire.models.Component" {
@@ -28,7 +28,7 @@ component extends="cbwire.models.Component" {
 
 ### Implicit Lookup
 
-If you have explicitly set your component's view using `renderIt()` or `variables.view`, cbwire will look for a file that matches your component's file name.
+If you haven't set your component's view using `renderIt()` or `variables.view`, cbwire will look for a file that matches your component's file name.
 
 ```javascript
 // File: ./wires/Counter.cfc
@@ -37,10 +37,14 @@ component extends="cbwire.models.Component" {
 }
 ```
 
-For the `Counter.cfc` example above, cbwire will attempt to render a template located under **./views/wires/counter.cfm**
+For the `Counter.cfc` example above, cbwire will attempt to render a view located under **./views/wires/counter.cfm**
 
 {% hint style="info" %}
 File names should be lowercase when using Implicit Lookups. This is to avoid issues on case-sensitive file systems.
+{% endhint %}
+
+{% hint style="info" %}
+If cbwire cannot determine how to render your component's view, a `RenderMethodNotFound` exception is thrown.
 {% endhint %}
 
 ### View Example
