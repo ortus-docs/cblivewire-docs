@@ -65,5 +65,5 @@ If cbwire cannot determine how to render your component's view, a `RenderMethodN
 ```
 
 {% hint style="warning" %}
-Be sure that cbwire can bind onto your component's view by including an outer element such as`<div>`. If an outer element is not detected, cbwire will throw a `OuterElementNotFound`exception.
+Be sure that cbwire can bind onto your component's view by including an outer element such as`<div>`. If an outer element is not detected, cbwire will throw an `OuterElementNotFound`exception.
 {% endhint %}
