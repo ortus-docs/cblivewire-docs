@@ -21,7 +21,7 @@ Install [CommandBox](https://www.ortussolutions.com/products/commandbox), then f
 ```bash
 mkdir cbwire-demo
 cd cbwire-demo
-box create app .
+box coldbox create app .
 box install cbwire
 box server start
 ```
