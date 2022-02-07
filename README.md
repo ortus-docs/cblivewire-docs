@@ -10,9 +10,9 @@ description: >-
 
 Building modern apps is complicated. [ColdBox](https://coldbox.ortusbooks.com) makes creating server-side CFML apps easy, but what about the client-side? Front-end JavaScript frameworks like Vue and React are powerful, yet they also introduce complexity and a significant learning curve when creating our apps.
 
-What if you could create apps that look and feel like your Vue and React web apps but are written with CFML. Impossible, you say? Nay, we say!
+What if you could create apps that look and feel like your Vue and React web apps... but are written with CFML? Impossible, you say? Nay, we say!
 
-Introducing **cbwire: Power-up your CFML!**&#x20;
+Introducing **cbwire: Power-up your CFML!
 
 ## Let's create a Counter in cbwire...
 
