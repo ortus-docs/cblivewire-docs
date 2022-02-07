@@ -8,7 +8,9 @@ Within the root of your project, run:
 box install cbwire
 ```
 
-If you want the latest bleeding-edge, run:
+This will install the latest stable version of cbwire, for example `cbwire@1.1.0`
+
+If you want the latest bleeding-edge cbwire version (for example, `cbwire@2.0.0-snapshot`) run:
 
 ```bash
 box install cbwire@be
